@@ -5,7 +5,7 @@ export ZSH="/Users/hongquang/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Update ZSH interval
-UPDATE_ZSH_DAYS=13
+UPDATE_ZSH_DAYS=7
 
 # Load plugins
 plugins=(git zsh-autosuggestions aliases common-aliases)
@@ -21,8 +21,6 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 path+=("$HOME/.local/bin")
 export PATH
 
-export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
-export CI_JOB_TOKEN=xb2kuSuksaUMyLN58213
 setopt auto_cd
 
 export NVM_DIR=~/.nvm
@@ -33,7 +31,17 @@ export PATH="$PATH:/Users/hongquang/Dev/flutter/bin"
 export ANDROID_HOME=/Applications/ADT/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Alias for kubectl
+# Load fzf lib
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Config thefuck alias
+eval $(thefuck --alias)
+
+# Load zsh
+source $ZSH/oh-my-zsh.sh
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# aliases of kubectl
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kc='kubectl create'
@@ -45,13 +53,6 @@ alias kl='kubectl logs'
 alias kubecns='kubectl config view | grep namespace'
 alias kubecctx='kubectl config view | grep current-context:'
 
-# Load fzf lib
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Config thefuck alias
-eval $(thefuck --alias)
-
-# Load zsh
-source $ZSH/oh-my-zsh.sh
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+# alises
 alias lg='lazygit'
+

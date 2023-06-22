@@ -40,8 +40,8 @@ config_git() {
   read -r -p "Do you want to setup git? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     brew install git
-    git config --global user.email "$1"
-    git config --global user.name  "$2"
+    git config --global user.name  "$1"
+    git config --global user.email "$2"
     git config --global color.ui true
 
     success "Setup Git Successfully"
@@ -51,22 +51,35 @@ config_git() {
   fi
 }
 
+install_fonts() {
+ read -r -p "Do you want to install fonts? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+    brew tap homebrew/cask-fonts
+    brew install --cask font-hack-nerd-font
+  fi
+}
+
+
 install_tools() {
  read -r -p "Do you want to install some tools? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     brew install thefuck 
+    $(brew --prefix)/opt/fzf/install
     brew install kubectx
 
-    success "Installed thefuck, kubectx"
+    success "Installed thefuck, fzf, kubectx"
 
     brew install --cask warp
     brew install --cask raycast
+
+    success "Installed warp, raycast"
   fi
 }
 
 install_homebrew
 install_zsh
-install_tools
 config_git
+install_tools
+install_fonts
 
 echo "Finish Install! 🎉 🚀"
