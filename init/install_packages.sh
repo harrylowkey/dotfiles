@@ -19,18 +19,23 @@ install_zsh() {
 }
 
 install_ohmyzsh() {
-  cd ~/.oh-my-zsh
-  if [ $? -ne 0 ]; then
-    read -r -p "Do you want to install oh-my-zsh? [y|N] " response
-      if [[ $response =~ (y|yes|Y) ]];then
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-        rm -f ~/.zshrc && ln -s ~/.config/zshrc/.zshrc ~/.zshrc
-      fi
+  read -r -p "Do you want to install oh-my-zsh? [y|N] " response
+    if [[ $response =~ (y|yes|Y) ]];then
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
+}
+
+install_thefuck() {
+ read -r -p "Do you want to install thefuck? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+    brew install thefuck 
+    echo "Installed thefuck 🎉"
   fi
 }
 
 install_homebrew
 install_zsh
 install_ohmyzsh
+install_thefuck
 
 echo "Finish Install! 🎉 🚀"

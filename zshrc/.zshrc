@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 UPDATE_ZSH_DAYS=13
 
 # Load plugins
-plugins=(git zsh-autosuggestions aliases)
+plugins=(git zsh-autosuggestions aliases common-aliases)
 
 # Bootstrap
 source $ZSH/oh-my-zsh.sh
