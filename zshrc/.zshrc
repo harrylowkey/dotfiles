@@ -54,3 +54,4 @@ eval $(thefuck --alias)
 # Load zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+alias lg='lazygit'
