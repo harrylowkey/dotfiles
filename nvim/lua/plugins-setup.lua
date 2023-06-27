@@ -11,8 +11,7 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
--- autocommand that reloads neovim and installs/updates/removes plugins
--- when file is saved
+-- autocommand that reloads neovim and installs/updates/removes plugins when file is saved
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -20,15 +19,7 @@ vim.cmd([[
   augroup end
 ]])
 
--- import packer safely
-local status, packer = pcall(require, "packer")
-if not status then
-	return
-end
-
--- add list of plugins to install
-return packer.startup(function(use)
-	-- packer can manage itself
+require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
