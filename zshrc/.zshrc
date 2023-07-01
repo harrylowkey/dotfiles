@@ -26,9 +26,9 @@ setopt auto_cd
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-
-export PATH="$PATH:/Users/hongquang/Dev/flutter/bin"
-export ANDROID_HOME=/Applications/ADT/sdk
+# Add flutter sdk
+export PATH="$PATH:$HOME/flutter/bin"
+export ANDROID_HOME="$HOME/Library/Android/"
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Load fzf lib
