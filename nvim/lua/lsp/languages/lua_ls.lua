@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 local on_attach = require("lsp/on_attach")
 local capabilities = require("lsp/capabilities")
 
-lspconfig["lua_ls"].setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
