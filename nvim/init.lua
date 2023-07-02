@@ -1,5 +1,5 @@
-require("plugins-setup")
-require("core")
+require("base")
+require("highlights")
 require("plugins")
-require("lsp")
 require("mappings")
+require("lsp")
