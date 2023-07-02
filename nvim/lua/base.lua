@@ -4,19 +4,10 @@ vim.cmd("autocmd!")
 vim.scriptencoding = "utf-8"
 vim.wo.number = true
 
--- line numbers
-opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
-
--- tabs & indentation
-opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 3 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
-
 -- clipboard
 opt.clipboard = "unnamedplus"
 
+-- base
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 opt.title = true
@@ -38,6 +29,16 @@ opt.wrap = false -- No Wrap lines
 opt.backspace = { "start", "eol", "indent" }
 opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 opt.wildignore:append({ "*/node_modules/*" })
+
+-- line numbers
+opt.relativenumber = true -- show relative line numbers
+opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+
+-- tabs & indentation
+opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 3 -- 2 spaces for indent width
+opt.expandtab = true -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
 
 -- Add asterisks in block comments
 opt.formatoptions:append({ "r" })
