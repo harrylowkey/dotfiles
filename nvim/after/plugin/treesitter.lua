@@ -22,6 +22,7 @@ treesitter.setup({
 		"vim",
 		"dockerfile",
 		"gitignore",
+		"dart",
 	},
 	auto_install = true,
 })
