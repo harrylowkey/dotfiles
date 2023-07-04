@@ -56,3 +56,5 @@ alias kubecctx='kubectl config view | grep current-context:'
 # alises
 alias lg='lazygit'
 
+# ESG Gitlab Token
+export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
