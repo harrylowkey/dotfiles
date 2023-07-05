@@ -23,10 +23,9 @@ require("packer").startup(function(use)
    use("wbthomason/packer.nvim")
    use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
    use({
-      "svrana/neosolarized.nvim",
-      requires = { "tjdevries/colorbuddy.nvim" },
-   })
-   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+      "christoomey/vim-tmux-navigator",
+      lazy = false,
+   })                                    -- tmux & split window navigation
    use("szw/vim-maximizer")              -- maximizes and restores current window
    use("tpope/vim-surround")             -- add, delete, change surroundings (it's awesome)
    use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
@@ -34,6 +33,14 @@ require("packer").startup(function(use)
    use("nvim-tree/nvim-tree.lua")        -- file explorer
    use("nvim-tree/nvim-web-devicons")    -- vs-code like icons
    use("nvim-lualine/lualine.nvim")      -- statusline
+
+   -- colorschemes
+   use({
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+   })
 
    -- fuzzy finding w/ telescope
    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
@@ -67,9 +74,11 @@ require("packer").startup(function(use)
    use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
    use("onsails/lspkind.nvim")             -- vs-code like icons for autocompletion
 
-   use("jose-elias-alvarez/null-ls.nvim")  -- configure formatters & linters
-   use("jayp0521/mason-null-ls.nvim")      -- bridges gap b/w mason & null-ls
+   -- formatter & linters
+   use("jose-elias-alvarez/null-ls.nvim")
+   use("jayp0521/mason-null-ls.nvim")
 
+   -- highlighting
    use({
       "nvim-treesitter/nvim-treesitter",
       run = function()
@@ -77,7 +86,6 @@ require("packer").startup(function(use)
          ts_update()
       end,
    })
-
    use("windwp/nvim-autopairs")
    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
    use("lewis6991/gitsigns.nvim")

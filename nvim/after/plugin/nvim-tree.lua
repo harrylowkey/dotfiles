@@ -1,4 +1,5 @@
 local nvimtree = require("nvim-tree")
+local os_extend = require("utils.os_extend")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -16,12 +17,17 @@ local function custom_on_attach(bufnr)
    api.config.mappings.default_on_attach(bufnr)
 
    -- custom mappings
-   vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
-   vim.keymap.set("n", "<C-n>", api.tree.change_root_to_node, opts("CD"))
+   vim.keymap.set("n", "cr", api.tree.change_root_to_parent, opts("Up"))
+   vim.keymap.set("n", "cd", api.tree.change_root_to_node, opts("CD"))
    vim.keymap.set("n", "?", api.tree.toggle_help, opts("help"))
 end
 
 nvimtree.setup({
+   update_focused_file = {
+      enable = true,
+      update_cwd = false,
+      ignore_list = { ".git", "node_modules", ".cache" },
+   },
    renderer = {
       icons = {
          glyphs = {
@@ -65,3 +71,18 @@ local function open_nvim_tree(data)
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+local top_level = os_extend.capture("git rev-parse --show-toplevel")
+-- vim.keymap.set("n", ",cd", ":let $PYTHONPATH='" .. vim.fn.expand("%:p:h") .. "'<CR>", { silent = true, noremap = true })
+vim.keymap.set(
+   "n",
+   ",cr",
+   ":lua require('nvim-tree.api').tree.change_root('" .. top_level .. "')<CR>",
+   { silent = true, noremap = true }
+)
+vim.keymap.set(
+   "n",
+   ",cd",
+   ":lua require('nvim-tree.api').tree.change_root(vim.fn.expand('%:p:h'))<CR>",
+   { silent = true, noremap = true }
+)

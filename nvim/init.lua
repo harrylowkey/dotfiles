@@ -1,5 +1,7 @@
+require("commands")
 require("base")
+require("theme")
 require("highlights")
-require("plugins")
 require("mappings")
+require("plugins")
 require("lsp")
