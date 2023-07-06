@@ -33,6 +33,7 @@ require("packer").startup(function(use)
    use("nvim-tree/nvim-tree.lua")        -- file explorer
    use("nvim-tree/nvim-web-devicons")    -- vs-code like icons
    use("nvim-lualine/lualine.nvim")      -- statusline
+   use("ThePrimeagen/harpoon")
 
    -- colorschemes
    use({

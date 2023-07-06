@@ -3,10 +3,6 @@ local opts = { buffer = 0 }
 
 keymap.set("n", "<leader>3", "<cmd>ToggleTerm direction=horizontal<CR>")
 keymap.set("n", "<leader>4", "<cmd>ToggleTerm direction=vertical size=40<CR>")
--- keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
--- keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
--- keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
--- keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 
 function _G.set_terminal_keymaps()
    local opts = { buffer = 0 }
