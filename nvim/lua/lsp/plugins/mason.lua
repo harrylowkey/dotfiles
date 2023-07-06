@@ -2,13 +2,7 @@ local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
 local mason_null_ls = require("mason-null-ls")
 
-mason.setup({
-   ensure_installed = {
-      "mypy",
-      "ruff",
-      "black",
-   },
-})
+mason.setup()
 
 mason_lspconfig.setup({
    ensure_installed = {
@@ -26,6 +20,10 @@ mason_null_ls.setup({
       "prettier", -- ts/js formatter
       "stylua", -- lua formatter
       "eslint_d", -- ts/js linter
+      "mypy",
+      "ruff",
+      "black",
+      "flake8",
    },
    automatic_installation = true,
 })

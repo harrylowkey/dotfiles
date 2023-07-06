@@ -9,14 +9,15 @@ null_ls.setup({
    sources = {
       formatting.prettier,
       formatting.stylua,
+      formatting.black.with({ extra_args = { "--fast" } }),
       diagnostics.eslint_d.with({
          condition = function(utils)
             return utils.root_has_file(".eslintrc.js")
          end,
       }),
-      -- null_ls.builtins.diagnostics.mypy,
-      null_ls.builtins.diagnostics.ruff,
-      null_ls.builtins.formatting.black,
+      diagnostics.ruff,
+      diagnostics.flake8,
+      -- diagnostics.mypy,
    },
    -- configure format on save
    on_attach = function(current_client, bufnr)

@@ -18,3 +18,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- todo
 keymap.set("n", "<leader>td", ":TodoTelescope<CR>")
+
+-- markdown preview
+keymap.set("n", "<leader>md", "<cmd>MarkdownPreviewToggle<CR>")
