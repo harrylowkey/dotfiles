@@ -15,8 +15,8 @@ null_ls.setup({
 				return utils.root_has_file(".eslintrc.js")
 			end,
 		}),
-		diagnostics.ruff,
 		diagnostics.flake8,
+		-- diagnostics.ruff,
 		-- diagnostics.mypy,
 	},
 	-- configure format on save
