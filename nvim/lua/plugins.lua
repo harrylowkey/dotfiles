@@ -116,6 +116,15 @@ require("packer").startup(function(use)
 	use({
 		"goolord/alpha-nvim",
 	})
+
+	use({
+		"kevinhwang91/nvim-ufo",
+		requires = {
+			{ "kevinhwang91/promise-async" },
+			{ "luukvbaal/statuscol.nvim" },
+		},
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

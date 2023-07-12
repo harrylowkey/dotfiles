@@ -25,19 +25,19 @@ opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in sear
 opt.smarttab = true
 opt.breakindent = true
 opt.shiftwidth = 2
-opt.wrap = false          -- No Wrap lines
+opt.wrap = false -- No Wrap lines
 opt.backspace = { "start", "eol", "indent" }
 opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 opt.wildignore:append({ "*/node_modules/*" })
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
-opt.number = true         -- shows absolute line number on cursor line (when relative number is on)
+opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
 opt.tabstop = 4
 opt.shiftwidth = 3
-opt.expandtab = true  -- expand tab to spaces
+opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- Add asterisks in block comments
@@ -49,6 +49,12 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
-   pattern = "*",
-   command = "set nopaste",
+	pattern = "*",
+	command = "set nopaste",
 })
+
+-- Fold
+vim.o.foldcolumn = "1" -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
