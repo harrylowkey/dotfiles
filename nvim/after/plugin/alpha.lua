@@ -1,7 +1,8 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
+local theme = require("alpha.themes.theta")
 
--- Set header
+local config = theme.config
 local logo = [[
 
      ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ 
@@ -36,24 +37,37 @@ local function getGreeting(name)
 	elseif hour >= 21 then
 		greetingIndex = 5
 	end
-	return "\t" .. datetime .. "\t" .. greetingsTable[greetingIndex] .. ", " .. name
+	return "\t" .. greetingsTable[greetingIndex] .. ", " .. name .. "\t" .. datetime
 end
 
-local userName = "harrylowkey"
+local userName = "harry"
 local greeting = getGreeting(userName)
-dashboard.section.header.val = vim.split(logo .. "\n" .. greeting, "\n")
-
--- Set menu
-dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
-	dashboard.button("r", "  Recent", ":Telescope oldfiles<CR>"),
-	dashboard.button("s", "  Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
-	dashboard.button("u", "󰂖  Update plugins", ":PackerSync<CR>"),
-	dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
+local header = {
+	type = "text",
+	val = vim.split(logo .. "\n" .. greeting, "\n"),
+	opts = {
+		position = "center",
+		hl = "Type",
+		-- wrap = "overflow",
+	},
+}
+local buttons = {
+	type = "group",
+	val = {
+		{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+		{ type = "padding", val = 1 },
+		dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
+		dashboard.button("r", "  Recent", ":Telescope oldfiles<CR>"),
+		dashboard.button("s", "  Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
+		dashboard.button("u", "󰂖  Update plugins", ":PackerSync<CR>"),
+		dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
+	},
+	position = "center",
 }
 
--- Send config to alpha
-alpha.setup(dashboard.opts)
+config.layout[2] = header
+config.layout[6] = buttons
+alpha.setup(config)
 
 -- Disable folding on alpha buffer
 vim.cmd([[
