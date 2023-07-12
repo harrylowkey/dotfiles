@@ -113,6 +113,9 @@ require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 
+	use({
+		"goolord/alpha-nvim",
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end
