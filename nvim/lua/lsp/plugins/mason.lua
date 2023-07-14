@@ -2,7 +2,16 @@ local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
 local mason_null_ls = require("mason-null-ls")
 
-mason.setup()
+mason.setup({
+	ui = {
+		border = "rounded",
+		icons = {
+			package_installed = "",
+			package_pending = "",
+			package_uninstalled = "",
+		},
+	},
+})
 
 mason_lspconfig.setup({
 	ensure_installed = {
@@ -11,6 +20,7 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"lua_ls",
+		"pyright",
 	},
 	automatic_installation = true, -- not the same as ensure_installed
 })

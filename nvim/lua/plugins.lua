@@ -113,16 +113,27 @@ require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 
+	-- dashboard
 	use({
 		"goolord/alpha-nvim",
 	})
 
+	-- folding
 	use({
 		"kevinhwang91/nvim-ufo",
 		requires = {
 			{ "kevinhwang91/promise-async" },
 			{ "luukvbaal/statuscol.nvim" },
 		},
+	})
+
+	-- surround
+	use({
+		"kylechui/nvim-surround",
+		event = "BufRead",
+		config = function()
+			pcall(require, "plugins.nvim-surround")
+		end,
 	})
 
 	if packer_bootstrap then
