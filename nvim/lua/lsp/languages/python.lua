@@ -6,4 +6,14 @@ lspconfig.pyright.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "python" },
+	pyright = { autoImportCompletion = true },
+	python = {
+		analysis = {
+			autoImportCompletions = true,
+			autoSearchPaths = true,
+			useLibraryCodeForTypes = true,
+			typeCheckingMode = "basic",
+			diagnosticMode = "off",
+		},
+	},
 })

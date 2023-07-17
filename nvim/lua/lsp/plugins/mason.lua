@@ -21,6 +21,7 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"lua_ls",
 		"pyright",
+		"terraformls",
 	},
 	automatic_installation = true, -- not the same as ensure_installed
 })
