@@ -23,6 +23,16 @@ local function custom_on_attach(bufnr)
 	vim.keymap.set("n", "?", api.tree.toggle_help, opts("help"))
 end
 
+local git_icons = {
+	unstaged = "",
+	staged = "",
+	unmerged = "",
+	renamed = "➜",
+	untracked = "",
+	deleted = "",
+	ignored = "◌",
+}
+
 nvimtree.setup({
 	update_focused_file = {
 		enable = true,
@@ -31,22 +41,36 @@ nvimtree.setup({
 	},
 	renderer = {
 		icons = {
+			show = {
+				file = true,
+				folder = true,
+				folder_arrow = true,
+				git = true,
+				modified = true,
+			},
 			glyphs = {
 				folder = {
 					arrow_closed = " ", -- arrow when folder is closed
 					arrow_open = " ", -- arrow when folder is open
 				},
+				git = git_icons,
 			},
 		},
 	},
 	actions = {
 		open_file = {
+			quit_on_open = false,
+			-- if true the tree will resize itself after opening a file
+			resize_window = false,
 			window_picker = {
 				enable = false,
 			},
 		},
 	},
 	on_attach = custom_on_attach,
+	view = {
+		width = 40,
+	},
 })
 
 -- open nvim-tree on setup

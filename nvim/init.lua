@@ -1,6 +1,13 @@
+require("config.base")
+require("config.neovim")
+require("config.options")
+
+require("utils.globals")
+
 require("commands")
-require("theme")
-require("base")
 require("mappings")
 require("plugins")
-require("lsp")
+
+require("lsp.setup")
+require("lsp.config")
+require("lsp.plugins")

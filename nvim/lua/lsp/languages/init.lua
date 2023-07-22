@@ -1,5 +1,0 @@
-require("lsp.languages.html")
-require("lsp.languages.lua_ls")
-require("lsp.languages.typescript")
-require("lsp.languages.dart")
-require("lsp.languages.python")

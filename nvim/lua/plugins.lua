@@ -1,4 +1,4 @@
--- auto install packer if not installed
+-- auto install packej if not installed
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -40,6 +40,11 @@ require("packer").startup(function(use)
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
+		config = function()
+			-- load the colorscheme here
+			vim.cmd([[colorscheme tokyonight]])
+			require("config.colorscheme")
+		end,
 		opts = {},
 	})
 
@@ -75,8 +80,14 @@ require("packer").startup(function(use)
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-	}) -- enhanced lsp uis
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	}) -- enhanced lsp ui
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "neovim/nvim-lspconfig" },
+		},
+	})
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- highlighting
@@ -95,13 +106,7 @@ require("packer").startup(function(use)
 	use("folke/trouble.nvim")
 
 	-- terminal
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
+	use({ "akinsho/toggleterm.nvim" })
 
 	-- install without yarn or npm
 	use({
@@ -114,9 +119,7 @@ require("packer").startup(function(use)
 	})
 
 	-- dashboard
-	use({
-		"goolord/alpha-nvim",
-	})
+	use("goolord/alpha-nvim")
 
 	-- folding
 	use({
@@ -134,6 +137,29 @@ require("packer").startup(function(use)
 		config = function()
 			pcall(require, "plugins.nvim-surround")
 		end,
+	})
+
+	-- colorize hexdecimal color code
+	use("norcalli/nvim-colorizer.lua")
+
+	-- indent blankline
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- jump to word faster
+	use("ggandor/lightspeed.nvim")
+
+	use({
+		"sunjon/shade.nvim",
+		config = function()
+			require("shade").setup()
+			require("shade").toggle()
+		end,
+	})
+	-- noice
+	use({
+		"folke/noice.nvim",
+		lazy = false,
+		requires = { { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
 	})
 
 	if packer_bootstrap then

@@ -15,9 +15,12 @@ return function(client, bufnr)
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
-	if client.name == "tsserver" then
-		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
-		keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+	if client.name == "typescript-tools" then
+		keymap.set("n", "gD", ":TSToolsGoToSourceDefinition<CR>", opts) -- go to declaration
+		keymap.set("n", "<leader>oi", ":TSToolsOrganizeImports<CR>", opts) -- sorts and removes unused imports
+		keymap.set("n", "<leader>si", ":TSToolsSortImports<CR>", opts)
+		keymap.set("n", "<leader>ru", ":TSToolsRemoveUnused<CR>", opts)
+		keymap.set("n", "<leader>fe", ":TSToolsFixAll<CR>", opts)
+		keymap.set("n", "<leader>rui", ":TSToolsRemoveUnusedImports<CR>", opts)
 	end
 end
