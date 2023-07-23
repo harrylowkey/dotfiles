@@ -50,7 +50,19 @@ require("packer").startup(function(use)
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	use({
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		requires = {
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			{ "cljoly/telescope-repo.nvim" },
+		},
+		config = function()
+			require("plugins.telescope")
+		end,
+	}) -- fuzzy finder
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -73,6 +85,8 @@ require("packer").startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+
+	-- enhanced lsp ui
 	use({
 		"glepnir/lspsaga.nvim",
 		branch = "main",
@@ -80,7 +94,9 @@ require("packer").startup(function(use)
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-	}) -- enhanced lsp ui
+	})
+
+	-- typescript LSP
 	use({
 		"pmizio/typescript-tools.nvim",
 		requires = {
@@ -100,7 +116,6 @@ require("packer").startup(function(use)
 	})
 	use("windwp/nvim-autopairs")
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
-	use("lewis6991/gitsigns.nvim")
 	use("mg979/vim-visual-multi")
 	use("folke/todo-comments.nvim")
 	use("folke/trouble.nvim")
@@ -130,15 +145,6 @@ require("packer").startup(function(use)
 		},
 	})
 
-	-- surround
-	use({
-		"kylechui/nvim-surround",
-		event = "BufRead",
-		config = function()
-			pcall(require, "plugins.nvim-surround")
-		end,
-	})
-
 	-- colorize hexdecimal color code
 	use("norcalli/nvim-colorizer.lua")
 
@@ -155,11 +161,31 @@ require("packer").startup(function(use)
 			require("shade").toggle()
 		end,
 	})
+
 	-- noice
 	use({
 		"folke/noice.nvim",
 		lazy = false,
 		requires = { { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
+	})
+
+	-- which-key
+	use("folke/which-key.nvim")
+
+	-- git
+	use("lewis6991/gitsigns.nvim")
+	use("sindrets/diffview.nvim")
+
+	-- comment-box
+	use("LudoPinelli/comment-box.nvim")
+
+	-- zen mode
+	use({
+		"folke/zen-mode.nvim",
+		cmd = { "ZenMode" },
+		config = function()
+			require("plugins.zen")
+		end,
 	})
 
 	if packer_bootstrap then
