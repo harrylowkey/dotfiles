@@ -1,18 +1,21 @@
-# terminal - like Linux
-ctrl + alt - a : open /Applications/draw\.io.app
-ctrl + alt - p : open /Applications/Postman.app
-ctrl + alt - s : open /Applications/Slack.app
-ctrl + alt - d : open /Applications/Postico\ 2.app
-ctrl + alt - b : open /Applications/Brave\ Browser.app
+# Open application
 ctrl + alt - n : open /Applications/Notion.app
 ctrl + alt - o : open /Applications/Obsidian.app
-ctrl + alt - m : open /Applications/Mimestream.app
-ctrl + alt - t : open /Applications/Kitty.app
-ctrl + alt - u : open /Applications/StarUML.app
-ctrl + alt - q : open /Applications/qutebrowser.app
-ctrl + alt - w : open /Applications/wpsoffice.app
-ctrl + alt - e : emacs &
+ctrl + alt - p : open Applications/Postman.app
+ctrl + alt - d : open Applications/Datagrip.app
+ctrl + alt - c : open Applications/Pycharm.app
+ctrl + alt - w : open Applications/Webstorm.app
+# ctrl + alt - a : open /Applications/draw\.io.app
+# ctrl + alt - s : open /A/Applications/Brave\ Browser.app
+# ctrl + alt - d : open /Applications/Postico\ 2.app
+# ctrl + alt - m : open /Applications/Mimestream.app
+# ctrl + alt - t : open /Applications/Kitty.app
+# ctrl + alt - u : open /Applications/StarUML.app
+# ctrl + alt - q : open /Applications/qutebrowser.app
+# ctrl + alt - w : open /Applications/wpsoffice.app
+# ctrl + alt - e : emacs &
 
+# Toggle float
 shift + alt - space : yabai -m window --toggle float
 
 # Make window native fullscreen
@@ -38,6 +41,7 @@ shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
 shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
 
+#NOTE: Can't use yet
 # Move all the container to workspace
 shift + alt - 1 : yabai -m space --move 1
 shift + alt - 2 : yabai -m space --move 2
@@ -48,6 +52,7 @@ shift + alt - 6 : yabai -m space --move 6
 
 alt - r : yabai -m space --rotate 90
 
+#NOTE: Can't use yet
 # Focus Space
 alt - h : yabai -m space --focus prev
 alt - l : yabai -m space --focus next

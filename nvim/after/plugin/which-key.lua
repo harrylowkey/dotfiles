@@ -124,24 +124,24 @@ local normal_mode_mappings = {
 		t = { "<cmd>ToggleTerm direction=float<CR>", "terminal float" },
 	},
 
-	b = {
-		name = "Buffer",
-		b = { "<cmd>BufferLineMovePrev<CR>", "Move back" },
-		c = { '<cmd>lua require("utils").closeOtherBuffers()<CR>', "Close but current" },
-		d = { "<cmd>BufferOrderByDirectory<CR>", "Order by directory" },
-		f = { "<cmd>bfirst<CR>", "First buffer" },
-		l = { "<cmd>BufferLineCloseLeft<CR>", "Close Left" },
-		r = { "<cmd>BufferLineCloseRight<CR>", "Close Right" },
-		n = { "<cmd>BufferLineMoveNext<CR>", "Move next" },
-		p = { "<cmd>BufferLinePick<CR>", "Pick Buffer" },
-		P = { "<cmd>BufferLineTogglePin<CR>", "Pin/Unpin Buffer" },
-		s = {
-			name = "Sort",
-			d = { "<cmd>BufferLineSortByDirectory<CR>", "Sort by directory" },
-			e = { "<cmd>BufferLineSortByExtension<CR>", "Sort by extension" },
-			r = { "<cmd>BufferLineSortByRelativeDirectory<CR>", "Sort by relative dir" },
-		},
-	},
+	-- b = {
+	-- 	name = "Buffer",
+	-- 	b = { "<cmd>BufferLineMovePrev<CR>", "Move back" },
+	-- 	c = { '<cmd>lua require("utils").closeOtherBuffers()<CR>', "Close but current" },
+	-- 	d = { "<cmd>BufferOrderByDirectory<CR>", "Order by directory" },
+	-- 	f = { "<cmd>bfirst<CR>", "First buffer" },
+	-- 	l = { "<cmd>BufferLineCloseLeft<CR>", "Close Left" },
+	-- 	r = { "<cmd>BufferLineCloseRight<CR>", "Close Right" },
+	-- 	n = { "<cmd>BufferLineMoveNext<CR>", "Move next" },
+	-- 	p = { "<cmd>BufferLinePick<CR>", "Pick Buffer" },
+	-- 	P = { "<cmd>BufferLineTogglePin<CR>", "Pin/Unpin Buffer" },
+	-- 	s = {
+	-- 		name = "Sort",
+	-- 		d = { "<cmd>BufferLineSortByDirectory<CR>", "Sort by directory" },
+	-- 		e = { "<cmd>BufferLineSortByExtension<CR>", "Sort by extension" },
+	-- 		r = { "<cmd>BufferLineSortByRelativeDirectory<CR>", "Sort by relative dir" },
+	-- 	},
+	-- },
 
 	c = {
 		name = "LSP",
@@ -155,28 +155,30 @@ local normal_mode_mappings = {
 		t = { "<cmd>LspToggleAutoFormat<CR>", "toggle format on save" },
 	},
 
-	d = {
-		name = "Debug",
-		a = { "attach" },
-		b = { "breakpoint" },
-		c = { "continue" },
-		C = { "close UI" },
-		d = { "continue" },
-		h = { "visual hover" },
-		i = { "step into" },
-		o = { "step over" },
-		O = { "step out" },
-		r = { "repl" },
-		s = { "scopes" },
-		t = { "terminate" },
-		v = { "log variable" },
-		V = { "log variable above" },
-		w = { "watches" },
-	},
+	--  ╭──────────────────────────────────────────────────────────╮
+	--  │ 	d = {                                                 │
+	--  │ 		name = "debug",                                   │
+	--  │ 		a = { "attach" },                                 │
+	--  │ 		b = { "breakpoint" },                             │
+	--  │ 		c = { "continue" },                               │
+	--  │ 		c = { "close ui" },                               │
+	--  │ 		d = { "continue" },                               │
+	--  │ 		h = { "visual hover" },                           │
+	--  │ 		i = { "step into" },                              │
+	--  │ 		o = { "step over" },                              │
+	--  │ 		o = { "step out" },                               │
+	--  │ 		r = { "repl" },                                   │
+	--  │ 		s = { "scopes" },                                 │
+	--  │ 		t = { "terminate" },                              │
+	--  │ 		v = { "log variable" },                           │
+	--  │ 		v = { "log variable above" },                     │
+	--  │ 		w = { "watches" },                                │
+	--  │ 	},                                                    │
+	--  ╰──────────────────────────────────────────────────────────╯
 
 	g = {
-		name = "Git",
-		a = { "<cmd>!git add %:p<CR>", "add current" },
+		name = "git",
+		a = { "<cmd>!git add %:p<cr>", "add current" },
 		A = { "<cmd>!git add .<CR>", "add all" },
 		b = { '<cmd>lua require("internal.blame").open()<CR>', "blame" },
 		B = { "<cmd>Telescope git_branches<CR>", "branches" },
@@ -188,17 +190,17 @@ local normal_mode_mappings = {
 		-- 	p = { "<cmd>GitConflictPrevConflict<CR>", "move to prev conflict" },
 		-- 	t = { "<cmd>GitConflictChooseTheirs<CR>", "choose theirs" },
 		-- },
-		h = {
-			name = "Hunk",
-			d = "diff hunk",
-			p = "preview",
-			R = "reset buffer",
-			r = "reset hunk",
-			s = "stage hunk",
-			S = "stage buffer",
-			t = "toggle deleted",
-			u = "undo stage",
-		},
+		-- h = {
+		-- 	name = "Hunk",
+		-- 	d = "diff hunk",
+		-- 	p = "preview",
+		-- 	R = "reset buffer",
+		-- 	r = "reset hunk",
+		-- 	s = "stage hunk",
+		-- 	S = "stage buffer",
+		-- 	t = "toggle deleted",
+		-- 	u = "undo stage",
+		-- },
 		l = {
 			name = "Log",
 			a = { '<cmd>lua require("plugins.telescope").my_git_commits()<CR>', "commits (Telescope)" },
@@ -214,18 +216,18 @@ local normal_mode_mappings = {
 		},
 	},
 
-	p = {
-		name = "Project",
-		f = { "file" },
-		w = { "word" },
-		l = {
-			"<cmd>lua require'telescope'.extensions.repo.cached_list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%timeshift/', '/usr/', '/srv/', '/%.oh%-my%-zsh', '/Library/', '/%.cocoapods/'}}<CR>",
-			"list",
-		},
-		r = { "refactor" },
-		s = { "<cmd>SessionManager save_current_session<CR>", "save session" },
-		t = { "<cmd>TodoTrouble<CR>", "todo" },
-	},
+	-- p = {
+	-- 	name = "Project",
+	-- 	f = { "file" },
+	-- 	w = { "word" },
+	-- 	l = {
+	-- 		"<cmd>lua require'telescope'.extensions.repo.cached_list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%timeshift/', '/usr/', '/srv/', '/%.oh%-my%-zsh', '/Library/', '/%.cocoapods/'}}<CR>",
+	-- 		"list",
+	-- 	},
+	-- 	r = { "refactor" },
+	-- 	s = { "<cmd>SessionManager save_current_session<CR>", "save session" },
+	-- 	t = { "<cmd>TodoTrouble<CR>", "todo" },
+	-- },
 
 	s = {
 		name = "Search",
@@ -236,11 +238,13 @@ local normal_mode_mappings = {
 		s = { "<cmd>Telescope search_history theme=dropdown<CR>", "search history" },
 	},
 
-	t = {
-		name = "Table Mode",
-		m = { "toggle" },
-		t = { "tableize" },
-	},
+	--  ╭──────────────────────────────────────────────────────────╮
+	--  │ 	t = {                                                 │
+	--  │ 		name = "table mode",                              │
+	--  │ 		m = { "toggle" },                                 │
+	--  │ 		t = { "tableize" },                               │
+	--  │ 	},                                                    │
+	--  ╰──────────────────────────────────────────────────────────╯
 }
 
 local visual_mode_mappings = {

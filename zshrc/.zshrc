@@ -58,3 +58,6 @@ alias lg='lazygit'
 
 # ESG Gitlab Token
 export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
+
+# go to projects shortcut
+alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
