@@ -166,7 +166,7 @@ require("packer").startup(function(use)
 	use({
 		"folke/noice.nvim",
 		lazy = false,
-		requires = { { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
+		requires = { { "MunifTanjim/nui.nvim" } },
 	})
 
 	-- which-key

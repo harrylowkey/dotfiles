@@ -12,14 +12,14 @@ sketchybar --bar     height=24                                            \
                      blur_radius=0                                        \
                      padding_left=4                                       \
                      padding_right=4                                      \
-                     color=0xff1e1e1e                                   \
+                     color=0xff1e1e1e                                     \
                      position=bottom                                      \
                      sticky=on                                            \
                      font_smoothing=on                                    \
                                                                           \
            --default updates=when_shown                                   \
                      drawing=on                                           \
-                     icon.font="$LABEL:SemiBold:12.0"                      \
+                     icon.font="$LABEL:SemiBold:12.0"                     \
                      label.font="$LABEL:SemiBold:12.0"                    \
                      icon.padding_left=$PADDING                           \
                      icon.padding_right=$PADDING                          \

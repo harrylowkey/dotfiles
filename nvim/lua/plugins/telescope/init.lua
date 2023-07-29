@@ -30,6 +30,11 @@ require("telescope").setup({
 			"--line-number",
 			"--column",
 			"--smart-case",
+			"--ignore",
+			"--hidden",
+			"--glob=!.git/",
+			"--glob=!.build/",
+			"--glob=!.idea/",
 		},
 		layout_config = {
 			horizontal = {
@@ -38,7 +43,7 @@ require("telescope").setup({
 			prompt_position = "top",
 		},
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
-		prompt_prefix = "  ",
+		prompt_prefix = " 🔍 ",
 		color_devicons = true,
 		git_icons = git_icons,
 		sorting_strategy = "ascending",
