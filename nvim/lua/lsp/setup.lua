@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"terraformls",
 		"jsonls",
 		"bashls",
+		"yamlls",
 	},
 	automatic_installation = true, -- not the same as ensure_installed
 })
@@ -83,6 +84,11 @@ lspconfig.pyright.setup({
 	pyright = require("lsp.servers.python").pyright,
 	filetypes = require("lsp.servers.python").filetypes,
 	python = require("lsp.servers.python").python,
+})
+
+lspconfig.yamlls.setup({
+	on_attach = on_attach,
+	settings = require("lsp.servers.yamlls").settings,
 })
 
 for _, server in ipairs({ "html", "dartls", "terraformls", "bashls" }) do
