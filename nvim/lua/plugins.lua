@@ -40,9 +40,12 @@ require("packer").startup(function(use)
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
+		on_colors = function(colors)
+			colors.border = "#565f89"
+		end,
 		config = function()
 			-- load the colorscheme here
-			vim.cmd([[colorscheme tokyonight]])
+			vim.cmd([[colorscheme tokyonight-storm]])
 			require("config.colorscheme")
 		end,
 		opts = {},

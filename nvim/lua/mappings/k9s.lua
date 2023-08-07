@@ -1,8 +1,8 @@
 local Terminal = require("toggleterm.terminal").Terminal
 
-local lazygit = Terminal:new({
-	cmd = "lazygit",
-	dir = "git_dir",
+local k9s = Terminal:new({
+	cmd = "k9s",
+	hidden = true,
 	direction = "float",
 	float_opts = {
 		border = "curved", -- single/double/shadow/curved
@@ -11,18 +11,16 @@ local lazygit = Terminal:new({
 		winblend = 4,
 	},
 	on_open = function(term)
-		vim.cmd("startinsert!")
-		vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
 		require("shade").toggle()
 	end,
+	---@diagnostic disable-next-line: unused-local
 	on_close = function(term)
-		vim.cmd("startinsert!")
 		require("shade").toggle()
 	end,
 })
 
-function _lazygit_toggle()
-	lazygit:toggle()
+function _k9s_toggle()
+	k9s:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>k9", "<cmd>lua _k9s_toggle()<CR>", { noremap = true, silent = true })

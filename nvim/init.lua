@@ -11,3 +11,7 @@ require("plugins")
 require("lsp.setup")
 require("lsp.config")
 require("lsp.plugins")
+
+--  ╭──────────────────────────────────────────────────────────╮
+--  │ FIXME: copy-paste not respect indent line                │
+--  ╰──────────────────────────────────────────────────────────╯

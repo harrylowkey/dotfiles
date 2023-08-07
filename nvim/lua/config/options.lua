@@ -64,12 +64,6 @@ vim.opt.formatoptions:remove("c")
 vim.opt.formatoptions:remove("r")
 vim.opt.formatoptions:remove("o")
 vim.opt.formatoptions:append({ "r" })
-vim.opt.fillchars:append("stl: ")
-vim.opt.fillchars:append("eob: ")
-vim.opt.fillchars:append("fold: ")
-vim.opt.fillchars:append("foldopen: ")
-vim.opt.fillchars:append("foldsep: ")
-vim.opt.fillchars:append("foldclose:")
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 
@@ -78,6 +72,23 @@ vim.opt.foldcolumn = "1" -- '0' is not bad
 vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
+
+-- FILLCHARS
+vim.opt.fillchars = {
+	horiz = "━",
+	horizup = "┻",
+	horizdown = "┳",
+	vert = "┃",
+	vertleft = "┫",
+	vertright = "┣",
+	verthoriz = "╋",
+	stl = " ",
+	eob = " ",
+	fold = " ",
+	foldopen = "",
+	foldsep = " ",
+	foldclose = "",
+}
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
