@@ -5,8 +5,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "x", '"_x')
 
 -- Increment/decement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+keymap.set("n", "<C-+>", "<C-a>")
+keymap.set("n", "<C-_>", "<C-x>")
 
 -- Select all
 keymap.set("n", "<S-a>", "gg<S-v>G")

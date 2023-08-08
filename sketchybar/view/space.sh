@@ -11,7 +11,7 @@ for i in "${!SPACE_ICONS[@]}"; do
                               icon=${SPACE_ICONS[i]}                    \
                               icon.padding_left=10                      \
                               icon.padding_right=10                     \
-                              icon.color=0xff${GRAY:1}       \
+                              icon.color=0xff${GRAY:1}                  \
                               icon.highlight_color=0xff${GREEN:1}       \
                               label.drawing=off                         \
                               script="$PLUGIN_DIR/space.sh"             \
