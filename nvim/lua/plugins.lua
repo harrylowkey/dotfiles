@@ -37,15 +37,8 @@ require("packer").startup(function(use)
 
 	-- colorschemes
 	use({
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		on_colors = function(colors)
-			colors.border = "#565f89"
-		end,
+		"navarasu/onedark.nvim",
 		config = function()
-			-- load the colorscheme here
-			vim.cmd([[colorscheme tokyonight-storm]])
 			require("config.colorscheme")
 		end,
 		opts = {},
@@ -91,7 +84,7 @@ require("packer").startup(function(use)
 
 	-- enhanced lsp ui
 	use({
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		branch = "main",
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },

@@ -7,7 +7,7 @@ launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist
 yabai -m config window_border                on
 yabai -m config window_border_width          2
 yabai -m config active_window_border_color   0xff60ff60
-yabai -m config window_border_radius 10
+yabai -m config window_border_radius 0
 
 # Padding
 yabai -m config \
@@ -88,7 +88,7 @@ yabai -m rule --add app="Linear"          opacity=1 manage=off    space=III
 yabai -m rule --add app="Slack" title="Slack"      opacity=1 manage=off space=IV
 yabai -m rule --add app="zoom.us" manage=off       opacity=1            space=IV
 yabai -m rule --add app="^Microsoft Teams$" manage=off       opacity=1  space=IV
-yabai -m rule --add app="^Discord$" manage=off               opacity=1  space=IV
+yabai -m rule --add app="^Discord$" manage=off sticky=on layer=above opacity=1 space=IV
 yabai -m rule --add app="^Skype$"          opacity=1 manage=off space=IV
 yabai -m rule --add app="^Mailspring$"          opacity=1 manage=off space=IV
 yabai -m rule --add app="^Microsoft Outlook$"          opacity=1 manage=off space=IV

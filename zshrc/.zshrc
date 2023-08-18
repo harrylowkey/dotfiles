@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 UPDATE_ZSH_DAYS=7
 
 # Load plugins
-plugins=(git zsh-autosuggestions aliases common-aliases)
+plugins=(git zsh-autosuggestions aliases common-aliases zsh-fzf-history-search)
 
 # Bootstrap
 source $ZSH/oh-my-zsh.sh
@@ -61,3 +61,5 @@ export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
 
 # go to projects shortcut
 alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
+
+alias mux=tmuxinator

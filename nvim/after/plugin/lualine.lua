@@ -1,9 +1,5 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
 local lualine = require("lualine")
 
--- Color table for highlights
 -- stylua: ignore
 local colors = {
   bg       = '#202328',
@@ -39,7 +35,7 @@ local config = {
 		-- Disable sections and component separators
 		component_separators = "",
 		section_separators = "",
-		theme = "tokyonight",
+		theme = "onedark",
 	},
 	sections = {
 		-- these are to remove the defaults
@@ -91,23 +87,6 @@ ins_left({
 			n = colors.red,
 			i = colors.green,
 			v = colors.blue,
-			[""] = colors.blue,
-			V = colors.blue,
-			c = colors.magenta,
-			no = colors.red,
-			s = colors.orange,
-			S = colors.orange,
-			[""] = colors.orange,
-			ic = colors.yellow,
-			R = colors.violet,
-			Rv = colors.violet,
-			cv = colors.red,
-			ce = colors.red,
-			r = colors.cyan,
-			rm = colors.cyan,
-			["r?"] = colors.cyan,
-			["!"] = colors.red,
-			t = colors.red,
 		}
 		return { fg = mode_color[vim.fn.mode()] }
 	end,
@@ -115,9 +94,9 @@ ins_left({
 })
 
 ins_left({
-	-- filesize component
-	"filesize",
-	cond = conditions.buffer_not_empty,
+	"branch",
+	icon = "",
+	color = { fg = colors.violet, gui = "bold" },
 })
 
 ins_left({
@@ -125,10 +104,6 @@ ins_left({
 	cond = conditions.buffer_not_empty,
 	color = { fg = colors.magenta, gui = "bold" },
 })
-
-ins_left({ "location" })
-
-ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
 
 ins_left({
 	"diagnostics",
@@ -149,34 +124,10 @@ ins_left({
 	end,
 })
 
-ins_left({
-	-- Lsp server name .
-	function()
-		return " harry "
-	end,
-	color = { fg = "#56fe00", gui = "bold" },
-})
-
 -- Add components to right sections
-ins_right({
-	"o:encoding", -- option component same as &encoding in viml
-	fmt = string.upper, -- I'm not sure why it's upper case either ;)
-	cond = conditions.hide_in_width,
-	color = { fg = colors.green, gui = "bold" },
-})
+ins_right({ "location" })
 
-ins_right({
-	"fileformat",
-	fmt = string.upper,
-	icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-	color = { fg = colors.green, gui = "bold" },
-})
-
-ins_right({
-	"branch",
-	icon = "",
-	color = { fg = colors.violet, gui = "bold" },
-})
+ins_right({ "progress", color = { fg = colors.fg, gui = "bold" } })
 
 ins_right({
 	"diff",
@@ -188,6 +139,12 @@ ins_right({
 		removed = { fg = colors.red },
 	},
 	cond = conditions.hide_in_width,
+})
+
+ins_right({
+	-- filesize component
+	"filesize",
+	cond = conditions.buffer_not_empty,
 })
 
 ins_right({

@@ -1,0 +1,14 @@
+name: Megatron
+root: ~/Dev/megatron
+attach: false
+windows:
+  - renyoo-api:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd renyoo_api
+            - nvim
+        - log:
+            - cd renyoo_api
+  - renyoo-media-handler:
+      root: ~/Dev/megatron/renyoo-media-handler
