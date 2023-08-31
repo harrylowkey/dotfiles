@@ -1,0 +1,12 @@
+name: invoice
+root: ~/Dev/hodfords
+attach: false
+windows:
+  - invoice-api:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd invoices
+            - nvim
+        - log:
+            - cd invoices
