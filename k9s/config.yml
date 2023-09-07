@@ -43,9 +43,10 @@ k9s:
       portForwardAddress: localhost
     k3d-ckad-cluster:
       namespace:
-        active: default
+        active: mynamespace
         lockFavorites: false
         favorites:
+        - mynamespace
         - all
         - default
       view:

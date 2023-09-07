@@ -1,0 +1,12 @@
+name: dotfiles
+root: ~/.config
+attach: false
+windows:
+  - config:
+      - nvim
+  - nvim:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd nvim
+            - nvim
