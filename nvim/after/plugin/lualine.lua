@@ -142,12 +142,6 @@ ins_right({
 })
 
 ins_right({
-	-- filesize component
-	"filesize",
-	cond = conditions.buffer_not_empty,
-})
-
-ins_right({
 	function()
 		return "▊"
 	end,
