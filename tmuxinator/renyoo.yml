@@ -2,7 +2,7 @@ name: renyoo
 root: ~/Dev/megatron
 attach: false
 windows:
-  - renyoo-api:
+  - api-core:
       layout: main-horizontal
       panes:
         - source-code:
@@ -10,5 +10,25 @@ windows:
             - nvim
         - log:
             - cd renyoo_api
-  - renyoo-media-handler:
-      root: ~/Dev/megatron/renyoo-media-handler
+  - pixer-comment:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixer_comment
+            - nvim
+        - log:
+            - cd pixer_comment
+  - media-handler:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd renyoo-media-handler
+            - nvim
+        - log:
+            - cd renyoo-media-handler
+  - terraform-infra:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd renyoo-infra
+            - nvim
