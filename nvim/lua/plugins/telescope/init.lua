@@ -1,11 +1,12 @@
+local telescope = require("telescope")
 local actions = require("telescope.actions")
 local previewers = require("telescope.previewers")
 local builtin = require("telescope.builtin")
 local icons = NeoVim.icons
 
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("repo")
--- require("telescope").load_extension("git_worktree")
+telescope.load_extension("fzf")
+telescope.load_extension("repo")
+-- telescope.load_extension("git_worktree")
 
 local git_icons = {
 	added = icons.gitAdd,
@@ -17,9 +18,33 @@ local git_icons = {
 	untracked = "?",
 }
 
-require("telescope").setup({
+telescope.setup({
 	defaults = {
+		file_ignore_patterns = {
+			".git/",
+			".cache",
+			"%.o",
+			"%.a",
+			"%.out",
+			"%.class",
+			"%.pdf",
+			"%.mkv",
+			"%.mp4",
+			"%.zip",
+		},
+		entry_prefix = "   ",
 		border = true,
+		borderchars = {
+			prompt = { " ", " ", "─", " ", " ", " ", "─", "─" },
+			results = { "─", " ", " ", " ", "─", "─", " ", " " },
+			preview = { "─", " ", "─", "│", "┬", "─", "─", "╰" },
+		},
+		layout_strategy = "bottom_pane",
+		layout_config = {
+			height = 0.25,
+			preview_width = 0.5,
+			prompt_position = "bottom",
+		},
 		hl_result_eol = true,
 		multi_icon = "",
 		vimgrep_arguments = {
@@ -36,17 +61,12 @@ require("telescope").setup({
 			"--glob=!.build/",
 			"--glob=!.idea/",
 		},
-		layout_config = {
-			horizontal = {
-				preview_cutoff = 120,
-			},
-			prompt_position = "top",
-		},
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
 		prompt_prefix = " 🔍 ",
 		color_devicons = true,
 		git_icons = git_icons,
 		sorting_strategy = "ascending",
+		path_display = { "truncate" },
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
@@ -69,7 +89,8 @@ require("telescope").setup({
 	},
 	extensions = {
 		fzf = {
-			override_generic_sorter = false,
+			fuzzy = true,
+			override_generic_sorter = true,
 			override_file_sorter = true,
 			case_mode = "smart_case",
 		},

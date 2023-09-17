@@ -41,6 +41,7 @@ mason_null_ls.setup({
 		"eslint_d", -- ts/js linter
 		"black",
 		"flake8",
+		"isort",
 		-- "mypy",
 		-- "ruff",
 	},
@@ -105,3 +106,6 @@ require("typescript-tools").setup({
 	settings = require("lsp.servers.typescript").settings,
 	handlers = require("lsp.servers.typescript").handlers,
 })
+
+require("lsp.config")
+require("lsp.plugins")

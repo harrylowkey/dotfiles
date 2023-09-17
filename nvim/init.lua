@@ -1,6 +1,4 @@
-require("config.base")
-require("config.neovim")
-require("config.options")
+require("config")
 
 require("utils.globals")
 
@@ -8,10 +6,7 @@ require("commands")
 require("mappings")
 require("plugins")
 
-require("lsp.setup")
-require("lsp.config")
-require("lsp.plugins")
-
+require("lsp")
 --  ╭──────────────────────────────────────────────────────────╮
 --  │ FIXME: copy-paste not respect indent line                │
 --  ╰──────────────────────────────────────────────────────────╯

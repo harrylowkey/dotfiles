@@ -73,6 +73,16 @@ vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to de
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 
+-- List
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("eol:↲")
+vim.opt.listchars:append("tab:» ")
+vim.opt.listchars:append("trail:·")
+vim.opt.listchars:append("extends:<")
+vim.opt.listchars:append("precedes:>")
+vim.opt.listchars:append("conceal:┊")
+
 -- FILLCHARS
 vim.opt.fillchars = {
 	horiz = "━",

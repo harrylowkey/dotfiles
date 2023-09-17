@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 
 sketchybar --add event spotify_change $SPOTIFY_EVENT \
