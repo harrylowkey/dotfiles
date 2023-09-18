@@ -4,10 +4,6 @@ local previewers = require("telescope.previewers")
 local builtin = require("telescope.builtin")
 local icons = NeoVim.icons
 
-telescope.load_extension("fzf")
-telescope.load_extension("repo")
--- telescope.load_extension("git_worktree")
-
 local git_icons = {
 	added = icons.gitAdd,
 	changed = icons.gitChange,
@@ -96,6 +92,10 @@ telescope.setup({
 		},
 	},
 })
+
+telescope.load_extension("fzf")
+telescope.load_extension("repo")
+-- telescope.load_extension("git_worktree")
 
 -- Implement delta as previewer for diffs
 
