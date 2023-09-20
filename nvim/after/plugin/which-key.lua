@@ -94,14 +94,11 @@ local normal_mode_mappings = {
 	["9"] = "which_key_ignore",
 
 	-- single
-	["="] = { "<cmd>vertical resize +5<CR>", "resize +5" },
-	["-"] = { "<cmd>vertical resize -5<CR>", "resize +5" },
-	["v"] = { "<C-W>v", "split right" },
-	["V"] = { "<C-W>s", "split below" },
-	["q"] = { "quicklist" },
+	["?"] = { "<cmd>Telescope help_tags<CR>", "Telescope helps" },
+	["e"] = { "<cmd>NvimTreeToggle<CR>", "Tree toggle" },
 
 	["/"] = {
-		name = "Ecovim",
+		name = "Nvim",
 		["/"] = { "<cmd>Alpha<CR>", "open dashboard" },
 		c = { "<cmd>e $MYVIMRC<CR>", "open config" },
 		i = { "<cmd>PackerStatus<CR>", "manage plugins" },
@@ -118,41 +115,12 @@ local normal_mode_mappings = {
 
 	a = {
 		name = "Actions",
-		c = { "comment box" },
-		n = { "<cmd>set nonumber!<CR>", "line numbers" },
-		r = { "<cmd>set norelativenumber!<CR>", "relative number" },
-		t = { "<cmd>ToggleTerm direction=float<CR>", "terminal float" },
+		b = { "<cmd>Telescope colorscheme<CR>", "color schemes" },
 	},
 
-	-- b = {
-	-- 	name = "Buffer",
-	-- 	b = { "<cmd>BufferLineMovePrev<CR>", "Move back" },
-	-- 	c = { '<cmd>lua require("utils").closeOtherBuffers()<CR>', "Close but current" },
-	-- 	d = { "<cmd>BufferOrderByDirectory<CR>", "Order by directory" },
-	-- 	f = { "<cmd>bfirst<CR>", "First buffer" },
-	-- 	l = { "<cmd>BufferLineCloseLeft<CR>", "Close Left" },
-	-- 	r = { "<cmd>BufferLineCloseRight<CR>", "Close Right" },
-	-- 	n = { "<cmd>BufferLineMoveNext<CR>", "Move next" },
-	-- 	p = { "<cmd>BufferLinePick<CR>", "Pick Buffer" },
-	-- 	P = { "<cmd>BufferLineTogglePin<CR>", "Pin/Unpin Buffer" },
-	-- 	s = {
-	-- 		name = "Sort",
-	-- 		d = { "<cmd>BufferLineSortByDirectory<CR>", "Sort by directory" },
-	-- 		e = { "<cmd>BufferLineSortByExtension<CR>", "Sort by extension" },
-	-- 		r = { "<cmd>BufferLineSortByRelativeDirectory<CR>", "Sort by relative dir" },
-	-- 	},
-	-- },
-
 	c = {
-		name = "LSP",
-		a = { "code action" },
-		d = { "<cmd>TroubleToggle<CR>", "local diagnostics" },
-		D = { "<cmd>Telescope diagnostics wrap_results=true<CR>", "workspace diagnostics" },
-		f = { "format" },
-		l = { "line diagnostics" },
-		r = { "rename" },
-		R = { "structural replace" },
-		t = { "<cmd>LspToggleAutoFormat<CR>", "toggle format on save" },
+		name = "Comment box",
+		b = { "comment box" },
 	},
 
 	--  ╭──────────────────────────────────────────────────────────╮
@@ -177,74 +145,81 @@ local normal_mode_mappings = {
 	--  ╰──────────────────────────────────────────────────────────╯
 
 	g = {
-		name = "git",
+		name = "Git",
 		a = { "<cmd>!git add %:p<cr>", "add current" },
 		A = { "<cmd>!git add .<CR>", "add all" },
 		b = { '<cmd>lua require("internal.blame").open()<CR>', "blame" },
 		B = { "<cmd>Telescope git_branches<CR>", "branches" },
-		-- c = {
-		-- 	name = "Conflict",
-		-- 	b = { "<cmd>GitConflictChooseBoth<CR>", "choose both" },
-		-- 	n = { "<cmd>GitConflictNextConflict<CR>", "move to next conflict" },
-		-- 	o = { "<cmd>GitConflictChooseOurs<CR>", "choose ours" },
-		-- 	p = { "<cmd>GitConflictPrevConflict<CR>", "move to prev conflict" },
-		-- 	t = { "<cmd>GitConflictChooseTheirs<CR>", "choose theirs" },
-		-- },
-		-- h = {
-		-- 	name = "Hunk",
-		-- 	d = "diff hunk",
-		-- 	p = "preview",
-		-- 	R = "reset buffer",
-		-- 	r = "reset hunk",
-		-- 	s = "stage hunk",
-		-- 	S = "stage buffer",
-		-- 	t = "toggle deleted",
-		-- 	u = "undo stage",
-		-- },
+		d = {
+			name = "Git diff",
+			o = { ":DiffviewOpen<CR>", "Git status" },
+			c = { ":DiffviewClose<CR>", "Close git diff" },
+			f = { ":DiffviewFileHistory %<CR>", "Git status current file" },
+			h = { ":DiffviewFileHistory<CR>", "Git status all files history" },
+		},
 		l = {
 			name = "Log",
 			a = { '<cmd>lua require("plugins.telescope").my_git_commits()<CR>', "commits (Telescope)" },
 			c = { '<cmd>lua require("plugins.telescope").my_git_bcommits()<CR>', "buffer commits (Telescope)" },
 		},
 		m = { "blame line" },
-		s = { "<cmd>:DiffviewOpen<CR>", "status" },
-		S = { "<cmd>Telescope git_status<CR>", "telescope status" },
-		w = {
-			name = "Worktree",
-			w = "worktrees",
-			c = "create worktree",
-		},
 	},
-
-	-- p = {
-	-- 	name = "Project",
-	-- 	f = { "file" },
-	-- 	w = { "word" },
-	-- 	l = {
-	-- 		"<cmd>lua require'telescope'.extensions.repo.cached_list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%timeshift/', '/usr/', '/srv/', '/%.oh%-my%-zsh', '/Library/', '/%.cocoapods/'}}<CR>",
-	-- 		"list",
-	-- 	},
-	-- 	r = { "refactor" },
-	-- 	s = { "<cmd>SessionManager save_current_session<CR>", "save session" },
-	-- 	t = { "<cmd>TodoTrouble<CR>", "todo" },
-	-- },
 
 	s = {
 		name = "Search",
-		c = { "<cmd>Telescope colorscheme<CR>", "color schemes" },
-		d = { '<cmd>lua require("plugins.telescope").edit_neovim()<CR>', "dotfiles" },
-		h = { "<cmd>Telescope oldfiles hidden=true<CR>", "file history" },
-		H = { '<cmd>lua require("plugins.telescope").command_history()<CR>', "command history" },
+		f = { "<cmd>Telescope oldfiles hidden=true<CR>", "file history" },
+		c = { '<cmd>lua require("plugins.telescope").command_history()<CR>', "command history" },
 		s = { "<cmd>Telescope search_history theme=dropdown<CR>", "search history" },
 	},
 
-	--  ╭──────────────────────────────────────────────────────────╮
-	--  │ 	t = {                                                 │
-	--  │ 		name = "table mode",                              │
-	--  │ 		m = { "toggle" },                                 │
-	--  │ 		t = { "tableize" },                               │
-	--  │ 	},                                                    │
-	--  ╰──────────────────────────────────────────────────────────╯
+	f = {
+		name = "Telescope",
+		f = { "<cmd>Telescope find_files<cr>", "search files" },
+		s = { "<cmd>Telescope live_grep<cr>", "search text" },
+		c = { "<cmd>Telescope grep_string<cr>", "search text under cursor" },
+		b = { "<cmd>Telescope buffers<cr>", "list open buffers" },
+		h = { "<cmd>Telescope find_files hidden=true<cr>", "search hidden files" },
+		t = {
+			"<cmd>lua vim.cmd('NvimTreeFocus');vim.cmd('Telescope find_files hidden=true')<cr>",
+			"search files in tree",
+		},
+		k = { "<cmd>Telescope keymaps<cr>", "telescope key maps config" },
+		["/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "search text in current file" },
+	},
+
+	k = {
+		name = "K9s",
+		["9"] = { "<cmd>lua _k9s_toggle()<CR>", "k9s toggle" },
+	},
+
+	l = {
+		name = "Lazy Git & LSP Saga",
+		g = { "<cmd>lua _lazygit_toggle()<CR>", "lazy git toggle" },
+		c = { "<cmd>Lspsaga show_cursor_diagnostics<CR>", "diagnostics under cursor" },
+		l = { "<cmd>Lspsaga show_line_diagnostics<CR>", "diagnostics current line" },
+	},
+
+	m = {
+		name = "Markdown & Harpoon",
+		d = { "<cmd>MarkdownPreviewToggle<CR>", "markdown preview toggle" },
+		m = { ":Telescope harpoon marks<CR>", "harpoon list marked files" },
+		f = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "harpoon quick list marked files" },
+		n = { ":lua require('harpoon.ui').nav_next()<CR>", "harpoon open next marked file" },
+		p = { ":lua require('harpoon.ui').nav_prev()<CR>", "harpoon open previous marked file" },
+	},
+
+	t = {
+		name = "Todo & Trouble",
+		d = { ":TodoTelescope<CR>", "todo toggle" },
+		t = { ":TroubleToggle<CR>", "trouble toggle" },
+		w = { ":TroubleToggle workspace_diagnostics<CR>", "trouble diagnostics working project" },
+		c = { ":TroubleToggle document_diagnostics<CR>", "trouble diagnostics current file" },
+	},
+
+	r = {
+		name = "Rename text",
+		n = { "lua vim.lsp.buf.rename()<CR>", "rename" },
+	},
 }
 
 local visual_mode_mappings = {
@@ -281,10 +256,6 @@ local visual_mode_mappings = {
 		t = { "tableize" },
 	},
 }
-
--- ╭──────────────────────────────────────────────────────────╮
--- │ Register                                                 │
--- ╰──────────────────────────────────────────────────────────╯
 
 wk.register(normal_mode_mappings, opts)
 wk.register(visual_mode_mappings, visual_opts)

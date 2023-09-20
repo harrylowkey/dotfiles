@@ -8,5 +8,5 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opt) -- list open bu
 keymap.set("n", "<leader>f/", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 keymap.set("n", "<leader>fh", ":Telescope find_files hidden=true<cr>", opt)
 keymap.set("n", "<leader>ft", ":lua vim.cmd('NvimTreeFocus');vim.cmd('Telescope find_files hidden=true')<CR>", opt)
-keymap.set("n", "<leader>tkm", ":Telescope keymaps<CR>", opt)
+keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", opt)
 keymap.set("n", "<leader>?", "<cmd>Telescope help_tags<cr>", opt) -- list available help tags
