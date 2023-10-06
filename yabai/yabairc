@@ -8,6 +8,7 @@ yabai -m config window_border                on
 yabai -m config window_border_width          2
 yabai -m config active_window_border_color   0xff60ff60
 yabai -m config window_border_radius 0
+yabai -m config window_border_blur           off
 
 # Padding
 yabai -m config \
