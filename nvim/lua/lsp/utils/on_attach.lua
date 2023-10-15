@@ -34,13 +34,31 @@ return function(client, bufnr)
     keymap.set("n", "<leader>rui", ":TSToolsRemoveUnusedImports<CR>", opts)
   end
 
-  if client.server_capabilities.document_formatting then
-    if vim.bo.filetype == 'org' then return end
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      command = "lua vim.lsp.buf.format({ timeout_ms = 5000 })",
-      group = vim.api.nvim_create_augroup("LSPFormat", { clear = true })
-    })
-  else
-    vim.b.document_formatting = client.server_capabilities.document_formatting
-  end
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format({
+					filter = function(_client)
+						return _client.name == "null-ls"
+					end,
+					bufnr = bufnr,
+				})
+			end,
+		})
+	end
+
+	if client.server_capabilities.document_formatting then
+		if vim.bo.filetype == "org" then
+			return
+		end
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			command = "lua vim.lsp.buf.format({ timeout_ms = 5000 })",
+			group = vim.api.nvim_create_augroup("LSPFormat", { clear = true }),
+		})
+	else
+		vim.b.document_formatting = client.server_capabilities.document_formatting
+	end
 end

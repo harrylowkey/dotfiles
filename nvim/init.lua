@@ -2,6 +2,7 @@ require("options")
 require("utils.globals")
 
 require("commands")
+
 require("plugins")
 require("config")
 

@@ -3,7 +3,7 @@ local present, _ = pcall(require, "which-key")
 if not present then
 	return
 end
-local _, pwk = pcall(require, "plugins.which-key")
+local _, pwk = pcall(require, "config.plugins.which-key-commands")
 
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.md",

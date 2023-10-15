@@ -9,9 +9,6 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"cljoly/telescope-repo.nvim",
 		},
-		config = function()
-			require("config.plugins.telescope")
-		end,
 	},
 	{ "christoomey/vim-tmux-navigator" },
 	{ "nvim-tree/nvim-tree.lua" },
