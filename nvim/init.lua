@@ -1,10 +1,11 @@
-require("config")
-
+require("options")
 require("utils.globals")
 
 require("commands")
-require("mappings")
 require("plugins")
+require("config")
+
+require("mappings")
 
 require("lsp")
 --  ╭──────────────────────────────────────────────────────────╮

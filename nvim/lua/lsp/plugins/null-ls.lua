@@ -17,7 +17,7 @@ null_ls.setup({
 		-- python
 		diagnostics.flake8,
 		formatting.black.with({ extra_args = { "--fast" } }),
-        formatting.isort,
+		formatting.isort,
 
 		-- javascript
 		diagnostics.eslint_d.with({
