@@ -35,7 +35,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Config thefuck alias
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # Load zsh
 source $ZSH/oh-my-zsh.sh

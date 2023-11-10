@@ -1,20 +1,32 @@
 return {
-	{ "mg979/vim-visual-multi" },
-	{ "windwp/nvim-autopairs" },
-	{ "windwp/nvim-ts-autotag", dependencies = { "nvim-treesitter" } },
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("config.plugins.treesitter")
-		end,
-	},
-	{ "tpope/vim-surround" },
-	{
-		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
-		event = "VeryLazy",
-	},
-	{ "inkarkat/vim-ReplaceWithRegister" },
-	{ "numToStr/Comment.nvim" },
+  { "mg979/vim-visual-multi" },
+  { "inkarkat/vim-ReplaceWithRegister" },
+  { "windwp/nvim-ts-autotag",          dependencies = { "nvim-treesitter" } },
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("config.plugins.auto-pairs")
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("config.plugins.treesitter")
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("config.plugins.nvim-surround")
+    end,
+  },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
 }

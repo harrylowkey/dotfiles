@@ -1,6 +1,21 @@
 return {
-	{ "akinsho/toggleterm.nvim" },
-	{ "folke/trouble.nvim" },
-	{ "folke/todo-comments.nvim" },
-	{ "szw/vim-maximizer" },
+  { "szw/vim-maximizer" },
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("config.plugins.toggle-term")
+    end,
+  },
+  {
+    "folke/trouble.nvim",
+    config = function()
+      require("config.plugins.trouble")
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    config = function()
+      require("config.plugins.todo-comment")
+    end,
+  },
 }
