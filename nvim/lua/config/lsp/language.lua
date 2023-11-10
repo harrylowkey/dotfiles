@@ -2,9 +2,9 @@ local mason = require("mason")
 local lspconfig = require("lspconfig")
 local mason_lspconfig = require("mason-lspconfig")
 local mason_null_ls = require("mason-null-ls")
-local capabilities = require("lsp/utils/capabilities")
-local on_attach = require("lsp/utils/on_attach_helper")
-local handlers = require("lsp/utils/handlers")
+local capabilities = require("config.lsp.utils/capabilities")
+local on_attach = require("config.lsp.utils/on_attach_helper")
+local handlers = require("config.lsp.utils/handlers")
 
 mason.setup({
   ui = {
@@ -53,43 +53,43 @@ mason_null_ls.setup({
 lspconfig.cssls.setup({
   capabilities = capabilities,
   handlers = handlers,
-  on_attach = require("lsp.languages.cssls").on_attach,
-  settings = require("lsp.languages.cssls").settings,
+  on_attach = require("config.lsp.languages.cssls").on_attach,
+  settings = require("config.lsp.languages.cssls").settings,
 })
 
 lspconfig.eslint.setup({
   capabilities = capabilities,
   handlers = handlers,
-  on_attach = require("lsp.languages.eslint").on_attach,
-  settings = require("lsp.languages.eslint").settings,
+  on_attach = require("config.lsp.languages.eslint").on_attach,
+  settings = require("config.lsp.languages.eslint").settings,
 })
 
 lspconfig.jsonls.setup({
   capabilities = capabilities,
   handlers = handlers,
   on_attach = on_attach,
-  settings = require("lsp.languages.jsonls").settings,
+  settings = require("config.lsp.languages.jsonls").settings,
 })
 
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
   handlers = handlers,
   on_attach = on_attach,
-  settings = require("lsp.languages.lua_ls").settings,
+  settings = require("config.lsp.languages.lua_ls").settings,
 })
 
 lspconfig.pyright.setup({
   capabilities = capabilities,
   handlers = handlers,
   on_attach = on_attach,
-  pyright = require("lsp.languages.python").pyright,
-  filetypes = require("lsp.languages.python").filetypes,
-  python = require("lsp.languages.python").python,
+  pyright = require("config.lsp.languages.python").pyright,
+  filetypes = require("config.lsp.languages.python").filetypes,
+  python = require("config.lsp.languages.python").python,
 })
 
 lspconfig.yamlls.setup({
   on_attach = on_attach,
-  settings = require("lsp.languages.yamlls").settings,
+  settings = require("config.lsp.languages.yamlls").settings,
 })
 
 for _, server in ipairs({ "html", "dartls", "terraformls", "bashls" }) do
@@ -103,6 +103,6 @@ end
 require("typescript-tools").setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  settings = require("lsp.languages.typescript").settings,
-  handlers = require("lsp.languages.typescript").handlers,
+  settings = require("config.lsp.languages.typescript").settings,
+  handlers = require("config.lsp.languages.typescript").handlers,
 })

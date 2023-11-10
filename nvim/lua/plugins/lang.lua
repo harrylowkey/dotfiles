@@ -11,7 +11,7 @@ return {
   {
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
-      require("lsp.plugins.null-ls")
+      require("config.lsp.plugins.null-ls")
     end,
   },
 }

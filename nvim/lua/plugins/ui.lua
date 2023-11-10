@@ -16,7 +16,7 @@ return {
       { "nvim-treesitter/nvim-treesitter" },
     },
     config = function()
-      require("lsp.plugins.lspsaga")
+      require("config.lsp.plugins.lspsaga")
     end,
   },
   {
