@@ -1,2 +1,2 @@
 require("options.neovim")
-require("options.options")
+require("options.opts")
