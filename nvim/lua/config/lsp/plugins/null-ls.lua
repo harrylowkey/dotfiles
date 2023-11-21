@@ -1,5 +1,5 @@
 local null_ls = require("null-ls")
-local on_attach = require("config.lsp.utils.on_attach_helper")
+local on_attach = require("config.lsp.utils.on_attach")
 
 local formatting = null_ls.builtins.formatting   -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters

@@ -48,7 +48,7 @@ yabai -m rule --add app="^Apidog$" opacity=1 manage=off space=I
 yabai -m rule --add app="^Postico$" opacity=1 manage=off space=I
 yabai -m rule --add app="^RedisInsight-v2$" opacity=1 manage=off space=I
 yabai -m rule --add app="^Flipper$" opacity=1 manage=off space=I
-yabai -m rule --add app="^FileZilla$" opacity=1 manage=off space=I
+yabai -m rule --add app="^FileZilla$" opacity=2 manage=off space=I
 yabai -m rule --add label="VirtualBox" app="^VirtualBox$" opacity=1 manage=off space=I
 
 # Development
@@ -77,10 +77,10 @@ yabai -m rule --add app="WPS Office" space=III opacity=1 manage=off
 yabai -m rule --add app="Linear" space=III opacity=1 manage=off
 
 # Communication
-yabai -m rule --add app="Slack" space=II opacity=1 manage=off
+yabai -m rule --add app="Slack" space=I opacity=1 manage=off
 yabai -m rule --add app="zoom.us" space=IV opacity=1 manage=off
 yabai -m rule --add app="^Microsoft Teams$" space=IV opacity=1 manage=off
-yabai -m rule --add app="^Discord$" space=III opacity=1 manage=off
+yabai -m rule --add app="^Discord$" space=I opacity=1 manage=off
 yabai -m rule --add app="^Skype$" space=IV opacity=1 manage=off
 yabai -m rule --add app="^Mailspring$" space=IV opacity=1 manage=off
 yabai -m rule --add app="^Microsoft Outlook$" space=IV opacity=1 manage=off
@@ -116,6 +116,7 @@ yabai -m rule --add app="^Raycast$" opacity=1 manage=off
 yabai -m rule --add app="^Skitch$" opacity=1 manage=off
 yabai -m rule --add app="^DataGrip$" manage=off opacity=1
 yabai -m rule --add app="^Zalo$" manage=off space=II
+yabai -m rule --add app="^Arc$" manage=off space=I
 
 
 # show digital colour meter topmost and on all spaces
