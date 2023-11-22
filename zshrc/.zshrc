@@ -63,3 +63,8 @@ export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
 alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
 
 alias mux=tmuxinator
+
+
+# Password Store
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=/opt/homebrew/lib/password-store/extensions
