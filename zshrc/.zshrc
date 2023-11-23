@@ -63,6 +63,7 @@ export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
 alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
 
 alias mux=tmuxinator
+alias nv=nvim
 
 
 # Password Store
