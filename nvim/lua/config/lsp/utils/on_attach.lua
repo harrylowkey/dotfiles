@@ -9,7 +9,6 @@ return function(client, bufnr)
     keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 
     keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts)                -- show definition, references
-    -- keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)   -- go to declaration
     keymap.set("n", "gD", "<cmd>Lspsaga goto_type_definition<CR>", opts)  -- go to declaration
     keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)       -- see definition and make edits in window
     keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
@@ -25,12 +24,12 @@ return function(client, bufnr)
     keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)          -- show documentation for what is under cursor
 
     if client.name == "typescript-tools" then
-        keymap.set("n", "gD", ":TSToolsGoToSourceDefinition<CR>", opts) -- go to declaration
         keymap.set("n", "<leader>oi", ":TSToolsOrganizeImports<CR>", opts) -- sorts and removes unused imports
         keymap.set("n", "<leader>si", ":TSToolsSortImports<CR>", opts)
-        keymap.set("n", "<leader>ruc", ":TSToolsRemoveUnused<CR>", opts)
         keymap.set("n", "<leader>fe", ":TSToolsFixAll<CR>", opts)
-        keymap.set("n", "<leader>rui", ":TSToolsRemoveUnusedImports<CR>", opts)
+        keymap.set("n", "<leader>rc", ":TSToolsRemoveUnused<CR>", opts) -- removes all unused statements
+        keymap.set("n", "<leader>ri", ":TSToolsRemoveUnusedImports<CR>", opts)
+        keymap.set("n", "<leader>rn", ":TSToolsRenameFile<CR>", opts)
     end
 
     if client.supports_method("textDocument/formatting") then

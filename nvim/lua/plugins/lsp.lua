@@ -20,10 +20,6 @@ return {
         end,
     },
     {
-        "pmizio/typescript-tools.nvim",
-        dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    },
-    {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
             require("config.lsp.plugins.null-ls")
@@ -39,6 +35,10 @@ return {
         config = function()
             require("config.lsp.plugins.lspsaga")
         end,
+    },
+    {
+        "pmizio/typescript-tools.nvim",
+        dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
     -- {
     --     "jay-babu/mason-nvim-dap.nvim",

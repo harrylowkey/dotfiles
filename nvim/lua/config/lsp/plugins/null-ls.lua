@@ -14,7 +14,7 @@ null_ls.setup({
         formatting.ruff,
         formatting.isort,
 
-        -- javascript
+        -- js/ts
         diagnostics.eslint_d.with({
             condition = function(utils)
                 return utils.root_has_file(".eslintrc.js")
