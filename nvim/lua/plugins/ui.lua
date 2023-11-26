@@ -1,5 +1,10 @@
 return {
-    { "nvim-tree/nvim-web-devicons" },
+    {
+        "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("config.plugins.nvim-web-devicons")
+        end,
+    },
     { "onsails/lspkind.nvim" },
     {
         "folke/noice.nvim",
