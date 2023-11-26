@@ -3,10 +3,18 @@ root: ~/.config
 attach: false
 windows:
   - config:
-      - nvim
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - nvim
+        - terminal:
+            - echo "hi"
   - nvim:
       layout: main-horizontal
       panes:
         - source-code:
             - cd nvim
             - nvim
+        - terminal:
+            - cd nvim
+            - echo "hi"

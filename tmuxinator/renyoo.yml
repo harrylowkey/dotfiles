@@ -42,6 +42,16 @@ windows:
         - log:
             - cd pixer_user_post_interaction
             - . venv/bin/activate
+  - audit-log:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixer_audit_log
+            - . venv/bin/activate
+            - nvim
+        - log:
+            - cd pixer_audit_log
+            - . venv/bin/activate
   - mail:
       layout: main-horizontal
       panes:
@@ -50,3 +60,11 @@ windows:
             - nvim
         - log:
             - cd pixer_mail
+  - microservice-infra:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixer_microservice_infra
+            - nvim
+        - log:
+            - cd pixer_microservice_infra

@@ -64,6 +64,7 @@ alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
 
 alias mux=tmuxinator
 alias nv=nvim
+alias cl=clear
 
 
 # Password Store
