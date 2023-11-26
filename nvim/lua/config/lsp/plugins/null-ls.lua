@@ -6,11 +6,6 @@ local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 null_ls.setup({
     sources = {
-        -- prettier
-        formatting.prettier.with({
-            extra_filetypes = { "toml" },
-        }),
-
         -- lua
         formatting.stylua,
 
@@ -24,6 +19,9 @@ null_ls.setup({
             condition = function(utils)
                 return utils.root_has_file(".eslintrc.js")
             end,
+        }),
+        formatting.prettier.with({
+            extra_filetypes = { "toml" },
         }),
     },
     on_attach = on_attach,
