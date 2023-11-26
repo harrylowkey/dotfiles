@@ -15,8 +15,8 @@ null_ls.setup({
         formatting.stylua,
 
         -- python
-        diagnostics.flake8,
-        formatting.black.with({ extra_args = { "--fast" } }),
+        diagnostics.ruff,
+        formatting.ruff,
         formatting.isort,
 
         -- javascript

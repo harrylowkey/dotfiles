@@ -1,5 +1,5 @@
 require("mappings.base")
-require("mappings.tree")
+require("mappings.nvim-tree")
 require("mappings.editor")
 require("mappings.telescope")
 require("mappings.trouble")
