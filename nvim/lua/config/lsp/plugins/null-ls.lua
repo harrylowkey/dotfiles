@@ -20,6 +20,7 @@ null_ls.setup({
                 return utils.root_has_file(".eslintrc.js")
             end,
         }),
+        -- TODO: move to prettier_d
         formatting.prettier.with({
             extra_filetypes = { "toml" },
         }),

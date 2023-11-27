@@ -34,9 +34,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Load fzf lib
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Config thefuck alias
-# eval $(thefuck --alias)
-
 # Load zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -56,17 +53,18 @@ alias kubecctx='kubectl config view | grep current-context:'
 # alises
 alias lg='lazygit'
 
-# ESG Gitlab Token
-export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
 
-# go to projects shortcut
-alias renyoo_api='cd ~/Dev/megatron/renyoo_api/'
-
+# nvim & tmux
 alias mux=tmuxinator
 alias nv=nvim
 alias cl=clear
 
+# change border color
+borders active_color=0xff00ff00
 
 # Password Store
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/opt/homebrew/lib/password-store/extensions
+
+# ESG Gitlab Token
+export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
