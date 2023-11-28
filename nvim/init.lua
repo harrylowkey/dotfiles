@@ -1,7 +1,8 @@
+require("autocmds")
+
 require("options")
 require("utils.globals")
 
-require("autocmds")
 require("plugins")
 require("mappings")
 
