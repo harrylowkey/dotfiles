@@ -14,7 +14,7 @@ yabai -m config window_border_blur           off
 yabai -m config \
 	layout bsp \
 	top_padding 2   \
-	bottom_padding 2  \
+	bottom_padding 3  \
 	left_padding 2 \
 	right_padding 2 \
 	window_gap 0 \

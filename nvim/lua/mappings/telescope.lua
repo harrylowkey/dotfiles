@@ -7,4 +7,5 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opt) -- find str
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opt)     -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", ":Telescope find_files hidden=true<cr>", opt)
 keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", opt)
+keymap.set("n", "<leader>fn", ":Telescope notify<CR>", opt)
 keymap.set("n", "<leader>?", "<cmd>Telescope help_tags<cr>", opt) -- list available help tags
