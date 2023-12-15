@@ -1,0 +1,13 @@
+name: personal
+root: ~/Dev/personal
+attach: false
+windows:
+  - whatIlearn:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd whatIlearn
+            - nvim
+        - terminal:
+            - cd whatIlearn
+            - echo "Stick to plan"

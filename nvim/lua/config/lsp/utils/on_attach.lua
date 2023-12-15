@@ -8,8 +8,9 @@ return function(client, bufnr)
 
     keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 
+    keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- go to declaration
     keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts)                -- show definition, references
-    keymap.set("n", "gD", "<cmd>Lspsaga goto_type_definition<CR>", opts)  -- go to declaration
+    -- keymap.set("n", "gD", "<cmd>Lspsaga goto_type_definition<CR>", opts)  -- go to declaration
     keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)       -- see definition and make edits in window
     keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
     keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
