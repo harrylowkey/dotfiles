@@ -28,9 +28,9 @@ local options = {
   autoindent = true,              --- Good auto indent
   smartindent = true,             --- Makes indenting smart
   smarttab = true,                --- Makes tabbing smarter will realize you have 2 vs 4
-  shiftwidth = 2,                 --- Change a number of space characters inserted for indentation
-  softtabstop = 2,                --- Insert 2 spaces for a tab
-  tabstop = 2,                    --- Insert 2 spaces for a tab
+  shiftwidth = 4,                 --- Change a number of space characters inserted for indentation
+  softtabstop = 4,                --- Insert 2 spaces for a tab
+  tabstop = 4,                    --- Insert 2 spaces for a tab
   wrap = false,                   --- Display long lines as just one line
 
   splitright = true,              --- Vertical splits will automatically be to the right
@@ -89,6 +89,8 @@ end
 -- Override the nvim python.vim plugin
 -- located at /opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime/ftplugin/python.vim
 vim.cmd([[au FileType python set noexpandtab]])
+vim.cmd([[au FileType python set autoindent]])
+vim.cmd([[au FileType python set smartindent]])
 vim.cmd([[au FileType python set shiftwidth=4]])
 vim.cmd([[au FileType python set softtabstop=4]])
 vim.cmd([[au FileType python set tabstop=4]])

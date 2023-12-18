@@ -11,7 +11,8 @@ mason_lspconfig.setup({
         "terraformls",
         "jsonls",
         "bashls",
-        -- "yamlls",
+        "tsserver",
+        "yamlls",
     },
     automatic_installation = true, -- not related to ensure_installed
 })
