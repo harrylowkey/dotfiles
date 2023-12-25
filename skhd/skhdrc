@@ -5,6 +5,7 @@ ctrl + alt - p : open Applications/Postman.app
 ctrl + alt - d : open Applications/Datagrip.app
 ctrl + alt - c : open Applications/Pycharm.app
 ctrl + alt - w : open Applications/Webstorm.app
+ctrl + alt - z : open Applications/Zalo.app
 # ctrl + alt - a : open /Applications/draw\.io.app
 # ctrl + alt - s : open /A/Applications/Brave\ Browser.app
 # ctrl + alt - d : open /Applications/Postico\ 2.app
@@ -43,21 +44,6 @@ shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
 
 alt - r : yabai -m space --rotate 90
 
-#NOTE: Can't use yet
-# Focus Space
-alt - h : yabai -m space --focus prev
-alt - l : yabai -m space --focus next
-alt - tab : yabai -m space --focus recent
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
-alt - 7 : yabai -m space --focus 7
-alt - 8 : yabai -m space --focus 8
-alt - 9 : yabai -m space --focus 9
-
 # Resize windows
 shift + alt - h : \
     yabai -m window --resize left:-20:0 ; \
@@ -86,4 +72,20 @@ shift + lctrl + alt - m : yabai -m config --space mouse top_padding 0;
 
 # External Mode Yabai
 shift + lctrl + alt - e : yabai -m config --space mouse top_padding 30;
+
+
+#NOTE: Can't use yet
+# Focus Space
+alt - h : yabai -m space --focus prev
+alt - l : yabai -m space --focus next
+alt - tab : yabai -m space --focus recent
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
 
