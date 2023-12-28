@@ -11,3 +11,12 @@ windows:
         - terminal:
             - cd whatIlearn
             - echo "Stick to plan"
+  - opensources:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd opensources
+            - nvim
+        - terminal:
+            - cd opensources
+            - echo "Stick to plan"

@@ -1,2 +1,2 @@
 require("config.lsp.languages")
-require("config.lsp.config")
+require("config.lsp.ui-config")

@@ -41,10 +41,10 @@ return {
 			require("config.lsp.plugins.lspsaga")
 		end,
 	},
-	-- {
-	--     "pmizio/typescript-tools.nvim",
-	--     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-	-- },
+	{
+		"jose-elias-alvarez/nvim-lsp-ts-utils",
+		dependencies = "nvim-lspconfig",
+	},
 	-- {
 	--     "jay-babu/mason-nvim-dap.nvim",
 	--     config = function()
