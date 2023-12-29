@@ -47,10 +47,11 @@ local custom_on_attach = function(client, bufnr)
   })
   ts_utils.setup_client(client)
 
+  local opts = { silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>oi", ":TSLspOrganize<CR>", { silent = true })
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", ":TSLspRenameFile<CR>", { silent = true })
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ia", ":TSLspImportAll<CR>", { silent = true })
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>oi", ":TSLspOrganize<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", ":TSLspRenameFile<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ia", ":TSLspImportAll<CR>", opts)
 end
 
 lspconfig.tsserver.setup({
