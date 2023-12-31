@@ -1,5 +1,6 @@
 thefuck
 configstore
 raycast
-nats/
-argocd/
+nats
+argocd
+flutter
