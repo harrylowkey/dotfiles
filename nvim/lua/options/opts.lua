@@ -88,9 +88,25 @@ end
 
 -- Override the nvim python.vim plugin
 -- located at /opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime/ftplugin/python.vim
-vim.cmd([[au FileType python set noexpandtab]])
-vim.cmd([[au FileType python set autoindent]])
-vim.cmd([[au FileType python set smartindent]])
-vim.cmd([[au FileType python set shiftwidth=4]])
-vim.cmd([[au FileType python set softtabstop=4]])
-vim.cmd([[au FileType python set tabstop=4]])
+
+local function set_filetype_options(filetype)
+	vim.cmd(string.format(
+		[[
+        au FileType %s set noexpandtab
+        au FileType %s set autoindent
+        au FileType %s set smartindent
+        au FileType %s set shiftwidth=4
+        au FileType %s set softtabstop=4
+        au FileType %s set tabstop=4
+    ]],
+		filetype,
+		filetype,
+		filetype,
+		filetype,
+		filetype,
+		filetype
+	))
+end
+
+set_filetype_options("python")
+set_filetype_options("typescript")
