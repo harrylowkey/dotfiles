@@ -12,16 +12,17 @@ plugins=(git zsh-autosuggestions aliases common-aliases zsh-fzf-history-search z
 
 # Bootstrap
 source $ZSH/oh-my-zsh.sh
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH=${PATH}:/usr/local/mysql/bin/ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-path+=("$HOME/.local/bin")
-export PATH
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 setopt auto_cd
+
+#######################################
+
+# EXPORT env
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH=${PATH}:/usr/local/mysql/bin/
+export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -31,14 +32,18 @@ export PATH="$PATH:$HOME/flutter/bin"
 export ANDROID_HOME="$HOME/Library/Android/"
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Load fzf lib
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Password Store
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=/opt/homebrew/lib/password-store/extensions
 
-# Load zsh
-source $ZSH/oh-my-zsh.sh
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+# ESG Gitlab Token
+export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
 
-# aliases of kubectl
+#######################################
+
+# ALIASES
+
+# kubectl
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kc='kubectl create'
@@ -50,21 +55,15 @@ alias kl='kubectl logs'
 alias kubecns='kubectl config view | grep namespace'
 alias kubecctx='kubectl config view | grep current-context:'
 
-# alises
+# layzygit
 alias lg='lazygit'
-
 
 # nvim & tmux
 alias mux=tmuxinator
 alias nv=nvim
 alias cl=clear
 
+#######################################
+
 # change border color
 borders active_color=0xff00ff00
-
-# Password Store
-export PASSWORD_STORE_ENABLE_EXTENSIONS=true
-export PASSWORD_STORE_EXTENSIONS_DIR=/opt/homebrew/lib/password-store/extensions
-
-# ESG Gitlab Token
-export GITLAB_DIGINEX_TOKEN=xb2kuSuksaUMyLN58213
