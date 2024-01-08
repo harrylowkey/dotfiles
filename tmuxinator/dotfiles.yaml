@@ -6,7 +6,7 @@ windows:
       layout: main-horizontal
       panes:
         - source-code:
-            - nvim
+            - echo "lets config"
         - terminal:
             - echo "hi"
   - nvim:
@@ -14,7 +14,6 @@ windows:
       panes:
         - source-code:
             - cd nvim
-            - nvim
         - terminal:
             - cd nvim
             - echo "hi"

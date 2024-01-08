@@ -7,6 +7,5 @@ windows:
       panes:
         - source-code:
             - cd dms-backend
-            - nvim
         - log:
             - cd dms-backend
