@@ -45,6 +45,10 @@ return {
 		"jose-elias-alvarez/nvim-lsp-ts-utils",
 		dependencies = "nvim-lspconfig",
 	},
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	}
 	-- {
 	--     "jay-babu/mason-nvim-dap.nvim",
 	--     config = function()

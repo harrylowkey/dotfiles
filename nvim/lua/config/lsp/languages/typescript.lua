@@ -40,23 +40,24 @@ local custom_on_attach = function(client, bufnr)
   client.server_capabilities.document_formatting = false
   on_attach(client, bufnr)
 
-  local ts_utils = require("nvim-lsp-ts-utils")
+  -- local ts_utils = require("nvim-lsp-ts-utils")
 
-  ts_utils.setup({
-    update_imports_on_move = true,
-  })
-  ts_utils.setup_client(client)
+  -- ts_utils.setup({ update_imports_on_move = true })
+  -- ts_utils.setup_client(client)
 
   local opts = { silent = true }
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>oi", ":TSLspOrganize<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", ":TSLspRenameFile<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ia", ":TSLspImportAll<CR>", opts)
+  local keymap = vim.keymap                                          -- for conciseness
+  keymap.set("n", "<leader>oi", ":TSToolsOrganizeImports<CR>", opts) -- sorts and removes unused imports
+  keymap.set("n", "<leader>si", ":TSToolsSortImports<CR>", opts)
+  keymap.set("n", "<leader>fe", ":TSToolsFixAll<CR>", opts)
+  keymap.set("n", "<leader>rc", ":TSToolsRemoveUnused<CR>", opts) -- removes all unused statements
+  keymap.set("n", "<leader>ri", ":TSToolsRemoveUnusedImports<CR>", opts)
+  keymap.set("n", "<leader>rn", ":TSToolsRenameFile<CR>", opts)
 end
 
-lspconfig.tsserver.setup({
+require("typescript-tools").setup({
   capabilities = capabilities,
-  handlers = handlers,
   on_attach = custom_on_attach,
   settings = settings,
+  handlers = handlers,
 })
