@@ -49,9 +49,7 @@ local custom_on_attach = function(client, bufnr)
   local keymap = vim.keymap                                          -- for conciseness
   keymap.set("n", "<leader>oi", ":TSToolsOrganizeImports<CR>", opts) -- sorts and removes unused imports
   keymap.set("n", "<leader>si", ":TSToolsSortImports<CR>", opts)
-  keymap.set("n", "<leader>fe", ":TSToolsFixAll<CR>", opts)
-  keymap.set("n", "<leader>rc", ":TSToolsRemoveUnused<CR>", opts) -- removes all unused statements
-  keymap.set("n", "<leader>ri", ":TSToolsRemoveUnusedImports<CR>", opts)
+  keymap.set("n", "<leader>ru", ":TSToolsRemoveUnused<CR>", opts)    -- removes all unused statements
   keymap.set("n", "<leader>rn", ":TSToolsRenameFile<CR>", opts)
 end
 
