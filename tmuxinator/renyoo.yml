@@ -11,19 +11,10 @@ windows:
         - log:
             - cd renyoo_api
             - . venv/bin/activate
-  - comment:
+  - deployment:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd pixer_comment
-            - . venv/bin/activate
+            - cd pixer_deployment
         - log:
-            - cd pixer_comment
-            - . venv/bin/activate
-  - microservice-infra:
-      layout: main-horizontal
-      panes:
-        - source-code:
-            - cd pixer_microservice_infra
-        - log:
-            - cd pixer_microservice_infra
+            - cd pixer_deployment
