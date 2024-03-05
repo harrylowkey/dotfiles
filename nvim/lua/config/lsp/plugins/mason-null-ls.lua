@@ -8,6 +8,7 @@ mason_null_ls.setup({
     "isort",        -- python formatter
     "ruff",         -- python linter & linter
     "beautysh",
+    "cspell",
   },
   automatic_installation = true,   -- not related to ensure_installed
 })

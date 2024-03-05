@@ -27,23 +27,23 @@ lspconfig.pyright.setup({
 -- Override the nvim python.vim plugin
 -- located at /opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime/ftplugin/python.vim
 
-local function set_filetype_options(filetype)
-    vim.cmd(string.format(
-        [[
-        au FileType %s set expandtab
-        au FileType %s set autoindent
-        au FileType %s set smartindent
-        au FileType %s set shiftwidth=2
-        au FileType %s set softtabstop=2
-        au FileType %s set tabstop=2
-    ]],
-        filetype,
-        filetype,
-        filetype,
-        filetype,
-        filetype,
-        filetype
-    ))
-end
-
-set_filetype_options("python")
+-- Noted: edited directly in above file, otherwise need to manually set
+-- local function set_filetype_options(filetype)
+--     vim.cmd(string.format(
+--         [[
+--         au FileType %s set expandtab
+--         au FileType %s set autoindent
+--         au FileType %s set smartindent
+--         au FileType %s set shiftwidth=2
+--         au FileType %s set softtabstop=2
+--         au FileType %s set tabstop=2
+--     ]],
+--         filetype,
+--         filetype,
+--         filetype,
+--         filetype,
+--         filetype,
+--         filetype
+--     ))
+-- end
+-- set_filetype_options("python")
