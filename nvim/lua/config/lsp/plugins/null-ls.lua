@@ -21,6 +21,9 @@ null_ls.setup({
       end,
     }),
 
+    --sh
+    formatting.beautysh,
+
     -- TODO: move to prettier_d
     -- formatting.prettier.with({
     --     extra_filetypes = { "toml" },

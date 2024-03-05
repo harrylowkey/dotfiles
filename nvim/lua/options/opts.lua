@@ -85,27 +85,3 @@ end
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
-
--- Override the nvim python.vim plugin
--- located at /opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime/ftplugin/python.vim
-
-local function set_filetype_options(filetype)
-    vim.cmd(string.format(
-        [[
-        au FileType %s set noexpandtab
-        au FileType %s set autoindent
-        au FileType %s set smartindent
-        au FileType %s set shiftwidth=4
-        au FileType %s set softtabstop=4
-        au FileType %s set tabstop=4
-    ]],
-        filetype,
-        filetype,
-        filetype,
-        filetype,
-        filetype,
-        filetype
-    ))
-end
-
-set_filetype_options("typescript")
