@@ -63,6 +63,9 @@ alias mux=tmuxinator
 alias nv=nvim
 alias cl=clear
 
+# python
+alias python=python3
+
 #######################################
 
 # change border color
