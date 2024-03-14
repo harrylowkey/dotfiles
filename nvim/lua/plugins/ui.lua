@@ -11,13 +11,19 @@ return {
     --   opts = {},
     -- },
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
+        "rebelot/kanagawa.nvim",
         config = function()
             require("config.plugins.theme")
         end,
     },
+    -- {
+    --   "catppuccin/nvim",
+    --   name = "catppuccin",
+    --   priority = 1000,
+    --   config = function()
+    --     require("config.plugins.theme")
+    --   end,
+    -- },
     --
     {
         "xiyaowong/transparent.nvim",
