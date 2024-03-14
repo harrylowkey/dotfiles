@@ -19,34 +19,12 @@ k9s:
   currentContext: k3d-ckad-cluster
   currentCluster: k3d-ckad-cluster
   clusters:
-    DevelopmentCluster3:
+    arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks:
       namespace:
-        active: materiality-diginex-dev
+        active: pixerlens-client-dev
         lockFavorites: false
         favorites:
-        - all
-        - materiality-diginex-dev
-        - default
-      view:
-        active: po
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-        labels: {}
-      portForwardAddress: localhost
-    k3d-ckad-cluster:
-      namespace:
-        active: mynamespace
-        lockFavorites: false
-        favorites:
-        - mynamespace
+        - kube-system
         - all
         - default
       view:

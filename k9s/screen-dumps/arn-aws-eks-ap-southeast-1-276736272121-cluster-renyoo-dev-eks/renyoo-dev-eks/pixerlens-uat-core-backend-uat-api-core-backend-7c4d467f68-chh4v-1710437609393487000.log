@@ -1,0 +1,11 @@
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 8fa7bdf913be -> c1bf178c6227, update missing unique constraints User table
+/usr/local/lib/python3.11/site-packages/tzlocal/unix.py:193: UserWarning: Can not find any timezone configuration, defaulting to UTC.
+  warnings.warn("Can not find any timezone configuration, defaulting to UTC.")
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)
+INFO:     10.2.61.179:47678 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.2.61.179:57330 - "GET /openapi.json HTTP/1.1" 200 OK
