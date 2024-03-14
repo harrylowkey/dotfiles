@@ -66,6 +66,9 @@ alias cl=clear
 # python
 alias python=python3
 
+# config k9s config folder location
+export K9S_CONFIG_DIR=/Users/harrydang/.config/k9s
+
 #######################################
 
 # change border color
