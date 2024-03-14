@@ -2,17 +2,17 @@ local lualine = require("lualine")
 
 -- stylua: ignore
 local colors = {
-    bg       = '#202328',
-    fg       = '#bbc2cf',
-    yellow   = '#ECBE7B',
-    cyan     = '#008080',
-    darkblue = '#081633',
-    green    = '#98be65',
-    orange   = '#FF8800',
-    violet   = '#a9a1e1',
-    magenta  = '#c678dd',
-    blue     = '#51afef',
-    red      = '#ec5f67',
+  bg       = '#202328',
+  fg       = '#bbc2cf',
+  yellow   = '#ECBE7B',
+  cyan     = '#008080',
+  darkblue = '#081633',
+  green    = '#98be65',
+  orange   = '#FF8800',
+  violet   = '#a9a1e1',
+  magenta  = '#c678dd',
+  blue     = '#51afef',
+  red      = '#ec5f67',
 }
 
 local conditions = {
@@ -36,7 +36,7 @@ local config = {
         component_separators = "",
 
         section_separators = "",
-        theme = "onedark",
+        theme = "kanagawa",
     },
     sections = {
         -- these are to remove the defaults
@@ -73,7 +73,7 @@ ins_left({
     function()
         return "▊"
     end,
-    color = { fg = colors.blue },   -- Sets highlighting of component
+    color = { fg = colors.blue }, -- Sets highlighting of component
     padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
