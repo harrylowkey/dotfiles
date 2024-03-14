@@ -18,7 +18,7 @@ windows:
       layout: main-horizontal
       panes:
         - monitors:
-            - echo "monitoring"
+            - k9s
   - deployment:
       layout: main-horizontal
       panes:
