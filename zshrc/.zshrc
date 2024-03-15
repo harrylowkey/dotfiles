@@ -63,9 +63,6 @@ alias mux=tmuxinator
 alias nv=nvim
 alias cl=clear
 
-# python
-alias python=python3
-
 # config k9s config folder location
 export K9S_CONFIG_DIR=/Users/harrydang/.config/k9s
 
@@ -73,3 +70,12 @@ export K9S_CONFIG_DIR=/Users/harrydang/.config/k9s
 
 # change border color
 borders active_color=0xff00ff00
+
+# python
+alias python=python3
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+fi
