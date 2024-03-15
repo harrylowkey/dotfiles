@@ -6,7 +6,7 @@ return function(client, bufnr)
     client.server_capabilities.document_formatting = true
     keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 
-    keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- go to declaration
+    keymap.set("n", "ge", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- go to declaration
     keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
     keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
     keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
