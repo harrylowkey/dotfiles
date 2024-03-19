@@ -1,0 +1,13 @@
+k9s:
+  cluster: k3d-pixerlens-infra-local
+  namespace:
+    active: pixerlens-dev
+    lockFavorites: false
+    favorites:
+    - pixerlens-dev
+    - default
+  view:
+    active: po
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost

@@ -4,6 +4,12 @@ k9s:
     active: pixerlens-dev
     lockFavorites: false
     favorites:
+    - database-uat
+    - argocd
+    - ingress-nginx
+    - checker-dev
+    - database-dev
+    - pixerlens-uat
     - pixerlens-client-dev
     - pixerlens-dev
     - default
