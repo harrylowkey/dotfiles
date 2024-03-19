@@ -26,6 +26,9 @@ null_ls.setup({
 
         --sh
         formatting.beautysh,
+
+        diagnostics.djlint,
+        formatting.djlint,
     },
     on_attach = on_attach,
 })
