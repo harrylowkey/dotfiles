@@ -10,14 +10,14 @@ LABEL="Hack Nerd Font"
 
 sketchybar --bar     height=35                                            \
                      blur_radius=0                                        \
-					 padding_left=4                                       \
+					           padding_left=4                                       \
                      padding_right=4                                      \
-                     color=#000000										  \
+                     color=#000000										                    \
                      position=top                                         \
                      sticky=on                                            \
                      font_smoothing=on                                    \
                                                                           \
-           --default updates=when_shown                                   \
+                     --default updates=when_shown                         \
                      drawing=on                                           \
                      icon.font="$LABEL:SemiBold:12.0"                     \
                      label.font="$LABEL:SemiBold:12.0"                    \
