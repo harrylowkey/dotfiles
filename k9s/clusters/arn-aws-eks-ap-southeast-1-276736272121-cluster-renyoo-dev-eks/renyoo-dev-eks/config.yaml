@@ -15,8 +15,9 @@ k9s:
     - pixerlens-client-dev
     - pixerlens-dev
     - default
+    - rotex-dev
   view:
-    active: pod
+    active: po
   featureGates:
     nodeShell: false
   portForwardAddress: localhost
