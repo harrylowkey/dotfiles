@@ -1,37 +1,42 @@
 k9s:
-  liveViewAutoRefresh: false
-  screenDumpDir: /Users/harrydang/.config/k9s/screen-dumps
   refreshRate: 2
   maxConnRetry: 5
   readOnly: false
   noExitOnCtrlC: false
-  ui:
-    enableMouse: false
-    headless: false
-    logoless: false
-    crumbsless: false
-    reactive: false
-    noIcons: false
-    defaultsToFullScreen: false
+  noIcons: false
   skipLatestRevCheck: false
-  disablePodCounting: false
-  shellPod:
-    image: busybox:1.35.0
-    namespace: default
-    limits:
-      cpu: 100m
-      memory: 100Mi
-  imageScans:
-    enable: false
-    exclusions:
-      namespaces: []
-      labels: {}
   logger:
     tail: 100
     buffer: 5000
-    sinceSeconds: -1
+    sinceSeconds: 300
+    fullScreenLogs: false
     textWrap: false
     showTime: false
+  currentContext: k3d-ckad-cluster
+  currentCluster: k3d-ckad-cluster
+  clusters:
+    arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks:
+      namespace:
+        active: pixerlens-client-dev
+        lockFavorites: false
+        favorites:
+        - kube-system
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
   thresholds:
     cpu:
       critical: 90
@@ -39,3 +44,10 @@ k9s:
     memory:
       critical: 90
       warn: 70
+  screenDumpDir: /var/folders/yb/ry0s93qs1pzc_0f9n060n6lm0000gn/T/k9s-screens-hongquang
+  ui:
+    enableMouse: true
+    headless: false
+    logoless: true
+    skin: customize
+    
