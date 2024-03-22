@@ -1,4 +1,4 @@
--- require("transparent").setup({ -- Optional, you eon't have to run setup.
+--highlight SignColumn ctermbg=None guibg=None require("transparent").setup({ -- Optional, you eon't have to run setup.
 --   groups = {                   -- table: default groups
 --     "Normal",
 --     "NormalNC",
