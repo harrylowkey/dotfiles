@@ -1,7 +1,7 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: pixerlens-dev
+    active: pixerlens-client-dev
     lockFavorites: false
     favorites:
     - all
