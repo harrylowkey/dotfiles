@@ -21,7 +21,7 @@ local options = {
     relativenumber = true, --- Enables relative number
     scrolloff = 8, --- Always keep space when scrolling to bottom/top edge
     showtabline = 0, --- Never display the tabline, regardless of the number of tabs
-    signcolumn = "no", --- Add extra sign column next to line number
+    signcolumn = "yes", --- Add extra sign column next to line number
     smartcase = true, --- Uses case in search
 
     expandtab = true, --- Use spaces instead of tabs
