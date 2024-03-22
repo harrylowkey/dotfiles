@@ -4,6 +4,8 @@ k9s:
     active: pixerlens-client-dev
     lockFavorites: false
     favorites:
+    - pixerlens-client-dev
+    - superset-dev
     - all
     - pixerlens-client-uat
     - database-uat
@@ -12,12 +14,11 @@ k9s:
     - checker-dev
     - database-dev
     - pixerlens-uat
-    - pixerlens-client-dev
     - pixerlens-dev
     - default
     - rotex-dev
   view:
-    active: po
+    active: namespace
   featureGates:
     nodeShell: false
   portForwardAddress: localhost
