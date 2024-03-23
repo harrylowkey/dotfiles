@@ -44,7 +44,7 @@ k9s:
     memory:
       critical: 90
       warn: 70
-  screenDumpDir: /var/folders/yb/ry0s93qs1pzc_0f9n060n6lm0000gn/T/k9s-screens-hongquang
+  screenDumpDir: /Users/harrydang/.config/k9s/screen-dumps/
   ui:
     enableMouse: true
     headless: false
