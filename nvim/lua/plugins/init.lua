@@ -37,8 +37,8 @@ local plugins = merge(
     ui_plugins,
     coding_plugins,
     cmp_plugins,
-    db_plugins
-    -- dap_plugins
+    db_plugins,
+    dap_plugins
 )
 
 require("lazy").setup(plugins)

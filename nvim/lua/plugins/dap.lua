@@ -1,7 +1,17 @@
 return {
     {
+        "folke/neodev.nvim",
+        opts = {},
+        config = function()
+            require("neodev").setup({ library = { plugins = { "nvim-dap-ui" }, types = true } })
+        end,
+    },
+    {
+        "mfussenegger/nvim-dap",
+    },
+    {
         "rcarriga/nvim-dap-ui",
-        dependencies = "mfussenegger/nvim-dap",
+        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
         config = function()
             local dap = require("dap")
             local dapui = require("dapui")
@@ -16,17 +26,6 @@ return {
                 dapui.close()
             end
         end,
-    },
-    {
-        "mfussenegger/nvim-dap",
-        keys = {
-            {
-                "<leader>deb",
-                "<cmd> DapToggleBreakpoint <CR>",
-                desc = "Debug Method",
-                ft = "python",
-            },
-        },
     },
     {
         "mfussenegger/nvim-dap-python",
