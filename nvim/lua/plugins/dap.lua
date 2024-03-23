@@ -21,7 +21,7 @@ return {
         "mfussenegger/nvim-dap",
         keys = {
             {
-                "<leader>db",
+                "<leader>deb",
                 "<cmd> DapToggleBreakpoint <CR>",
                 desc = "Debug Method",
                 ft = "python",
@@ -51,7 +51,7 @@ return {
             },
         },
         config = function()
-            local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+            local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python3"
             require("dap-python").setup(path)
         end,
     },

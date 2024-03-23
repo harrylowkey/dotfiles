@@ -126,8 +126,6 @@ ins_left({
 })
 
 -- Add components to right sections
-ins_right(require("lazyvim.util").lualine.cmp_source("codeium"))
-
 ins_right({ "location" })
 
 ins_right({ "progress", color = { fg = colors.fg, gui = "bold" } })
