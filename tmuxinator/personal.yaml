@@ -10,11 +10,10 @@ windows:
         - terminal:
             - cd whatIlearn
             - echo "Stick to plan"
-  - opensources:
+  - iscale-api:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd opensources
+            - cd iscale-api
         - terminal:
-            - cd opensources
-            - echo "Stick to plan"
+            - cd iscale-api
