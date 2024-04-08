@@ -6,8 +6,8 @@ end
 
 rest.setup({
     client = "curl",
-    env_file = ".rest",
-    env_pattern = "\\.rest\\.*",
+    env_file = ".env",
+    env_pattern = "\\.env\\.*",
     env_edit_command = "tabedit",
     encode_url = true,
     skip_ssl_verification = false,
