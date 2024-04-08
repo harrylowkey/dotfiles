@@ -25,6 +25,8 @@ treesitter.setup({
         "gitignore",
         "dart",
         "python",
+        "xml",
+        "http",
     },
     auto_install = true,
 })

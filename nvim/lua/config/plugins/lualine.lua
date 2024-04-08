@@ -126,6 +126,8 @@ ins_left({
 })
 
 -- Add components to right sections
+ins_right({ "rest", icon = "", fg = "#428890" })
+
 ins_right({ "location" })
 
 ins_right({ "progress", color = { fg = colors.fg, gui = "bold" } })
