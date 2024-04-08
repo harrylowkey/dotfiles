@@ -1,9 +1,13 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: pixerlens-dev
+    active: pixerlens-client-dev
     lockFavorites: false
     favorites:
+    - checker-uat
+    - system-dev
+    - micrologic-uat
+    - cert-manager
     - pixerlens-client-dev
     - superset-dev
     - all
@@ -18,7 +22,7 @@ k9s:
     - default
     - rotex-dev
   view:
-    active: pod
+    active: namespace
   featureGates:
     nodeShell: false
   portForwardAddress: localhost
