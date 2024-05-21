@@ -66,6 +66,9 @@ alias cl=clear
 # config k9s config folder location
 export K9S_CONFIG_DIR=/Users/harrydang/.config/k9s
 
+# disk used & sort with human readable
+alias du="du -h | sort -h"
+
 # s3 bucket
 S3_PERSONAL_BUCKET=s3://harry-personal
 

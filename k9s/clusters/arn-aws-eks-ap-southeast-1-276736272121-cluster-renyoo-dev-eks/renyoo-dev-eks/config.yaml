@@ -1,26 +1,28 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: pixerlens-client-uat
+    active: rotex-dev
     lockFavorites: false
     favorites:
-    - checker-uat
-    - system-dev
-    - micrologic-uat
-    - cert-manager
-    - pixerlens-client-dev
-    - superset-dev
+    - rotex-uat
     - all
-    - pixerlens-client-uat
-    - database-uat
-    - argocd
-    - ingress-nginx
-    - checker-dev
-    - database-dev
-    - pixerlens-uat
-    - pixerlens-dev
+    - superset-dev
+    - pixerlens-client-dev
     - default
     - rotex-dev
+    - pixerlens-mobile-demo
+    - argocd
+    - pixerlens-uat
+    - database-uat
+    - system-dev
+    - checker-dev
+    - checker-uat
+    - ingress-nginx
+    - cert-manager
+    - pixerlens-dev
+    - micrologic-uat
+    - database-dev
+    - pixerlens-client-uat
   view:
     active: namespace
   featureGates:
