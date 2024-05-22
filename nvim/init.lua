@@ -5,3 +5,5 @@ require("utils.globals")
 
 require("plugins")
 require("mappings")
+
+vim.cmd.colorscheme("gruvbox-material")
