@@ -1,5 +1,6 @@
 return {
     -- theme
+    { "diegoulloao/neofusion.nvim", priority = 1000, config = true, opts = ... },
     { "sainnhe/gruvbox-material", lazy = true },
     {
         "navarasu/onedark.nvim",

@@ -24,7 +24,7 @@ k9s:
     - database-dev
     - pixerlens-client-uat
   view:
-    active: node
+    active: namespace
   featureGates:
     nodeShell: false
   portForwardAddress: localhost

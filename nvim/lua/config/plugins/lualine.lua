@@ -37,6 +37,7 @@ local config = {
 
         section_separators = "",
         theme = "auto",
+        -- theme = require("neofusion.lualine"),
     },
     sections = {
         -- these are to remove the defaults
