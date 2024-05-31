@@ -7,10 +7,8 @@ windows:
         panes:
           - mail:
               - cd pixer_mail
-              - . venv/bin/activate
           - api-gateway:
               - cd pixer_api_gateway
-              - . venv/bin/activate
           - user-post-interaction:
               - cd pixer_user_post_interaction
               - . venv/bin/activate
