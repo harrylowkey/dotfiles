@@ -124,3 +124,5 @@ yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 echo "yabai configuration loaded.."
 
+
+borders active_color=0xff00ff00 inactive_color=0xff494d64 width=5.0 &
