@@ -72,6 +72,11 @@ alias du="du -h | sort -h"
 # s3 bucket
 S3_PERSONAL_BUCKET=s3://harry-personal
 
+# git cli
+alias create-pr='gh pr create --base pim-dev --head $(git branch --show-current)'
+alias mergeD-pr="gh pr merge -dm"
+alias merge-pr="gh pr merge -d"
+
 #######################################
 
 # change border color
