@@ -73,9 +73,13 @@ alias du="du -h | sort -h"
 S3_PERSONAL_BUCKET=s3://harry-personal
 
 # git cli
-alias create-pr='gh pr create --base pim-dev --head $(git branch --show-current)'
-alias mergeD-pr="gh pr merge -dm"
-alias merge-pr="gh pr merge -d"
+create_pr() {
+  local base_branch="$1"
+  local head_branch=$(git branch --show-current)
+  gh pr create --base "$base_branch" --head "$head_branch"
+}
+alias mergeD_pr="gh pr merge -dm"
+alias merge_pr="gh pr merge -d"
 
 #######################################
 
