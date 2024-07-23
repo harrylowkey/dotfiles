@@ -78,8 +78,8 @@ create_pr() {
   local head_branch=$(git branch --show-current)
   gh pr create --base "$base_branch" --head "$head_branch"
 }
-alias mergeD_pr="gh pr merge -dm"
-alias merge_pr="gh pr merge -d"
+alias mergeD-pr="gh pr merge -dm"
+alias merge-pr="gh pr merge -d"
 
 #######################################
 
