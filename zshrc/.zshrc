@@ -79,7 +79,7 @@ create_pr() {
   gh pr create --base "$base_branch" --head "$head_branch"
 }
 alias mergeD-pr="gh pr merge -dm"
-alias merge-pr="gh pr merge -d"
+alias merge-pr="gh pr merge -m"
 
 #######################################
 
