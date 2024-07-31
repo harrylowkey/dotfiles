@@ -29,7 +29,7 @@ windows:
       panes:
         - source-code:
             - cd renyoo_api
-            - . microservice_venv/bin/activate
+            - . venv/bin/activate
         - log:
             - cd renyoo_api
-            - . microservice_venv/bin/activate
+            - . venv/bin/activate
