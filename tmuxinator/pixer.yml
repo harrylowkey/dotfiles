@@ -1,17 +1,7 @@
-name: renyoo
+name: pixer
 root: ~/Dev/megatron
 attach: false
 windows:
-  - microservices:
-        layout: main-horizontal
-        panes:
-          - mail:
-              - cd pixer_mail
-          - api-gateway:
-              - cd pixer_api_gateway
-          - user-post-interaction:
-              - cd pixer_user_post_interaction
-              - . venv/bin/activate
   - monitors:
       layout: main-horizontal
       panes:
@@ -24,12 +14,12 @@ windows:
             - cd pixer_deployment
         - log:
             - cd pixer_deployment
-  - core-api:
+  - core:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd renyoo_api
+            - cd pixer_core
             - . venv/bin/activate
         - log:
-            - cd renyoo_api
+            - cd pixer_core
             - . venv/bin/activate
