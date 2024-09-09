@@ -1,9 +1,15 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: database-dev
+    active: tool-dev
     lockFavorites: false
     favorites:
+    - pixerlens-client-dev
+    - keycloak-dev
+    - database-dev
+    - tool-dev
+    - pim-uat
+    - kube-system
     - pim-dev
     - pixerlens-client-uat
     - rotex-uat
@@ -11,21 +17,18 @@ k9s:
     - kube-public
     - kube-node-lease
     - keycloak-uat
-    - keycloak-dev
     - all
     - cert-manager
     - checker-uat
     - system-dev
     - default
     - superset-dev
-    - database-dev
     - ingress-nginx
     - checker-dev
     - database-uat
     - argocd
-    - pixerlens-client-dev
-    - micrologic-uat
     - pixerlens-uat
+    - micrologic-uat
     - pixerlens-mobile-demo
     - pixerlens-dev
   view:

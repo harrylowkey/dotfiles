@@ -11,7 +11,8 @@ null_ls.setup({
         formatting.stylua,
 
         -- python
-        -- diagnostics.ruff, # pyright has diagnostics as default
+        -- diagnostics.ruff, -- pyright has diagnostics as default
+        formatting.autoflake,
         formatting.ruff,
         formatting.isort,
 
