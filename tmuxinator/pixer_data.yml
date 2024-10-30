@@ -1,0 +1,32 @@
+name: pixer_data
+root: ~/Dev/megatron/pixer_data
+attach: false
+windows:
+  - monitors:
+      layout: main-horizontal
+      panes:
+        - monitors:
+            - k9s
+  - deployment:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixerlens-deployments
+        - log:
+            - cd pixerlens-deployments
+  - api:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixerlens-data-chat-backend
+            - . venv/bin/activate
+        - log:
+            - cd pixerlens-data-chat-backend
+            - . venv/bin/activate
+  - gateway:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd pixerlens-data-api-gateway
+        - log:
+            - cd pixerlens-data-api-gateway

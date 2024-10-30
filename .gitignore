@@ -6,3 +6,4 @@ argocd
 flutter
 k9s/clusters/*
 gh/hosts
+zshrc/*

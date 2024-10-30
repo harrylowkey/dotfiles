@@ -1,23 +1,31 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: tool-dev
+    active: all
     lockFavorites: false
     favorites:
+    - all
+    - pixerlens-data-uat
+    - pixerlens-data-dev
+    - pixerpost
+    - tool-uat
+    - pim-dev
+    - trisu-uat
+    - database-uat
+    - pim-prod
+    - complaintmgm-uat
     - pixerlens-client-dev
     - keycloak-dev
     - database-dev
     - tool-dev
     - pim-uat
     - kube-system
-    - pim-dev
     - pixerlens-client-uat
     - rotex-uat
     - rotex-dev
     - kube-public
     - kube-node-lease
     - keycloak-uat
-    - all
     - cert-manager
     - checker-uat
     - system-dev
@@ -25,14 +33,13 @@ k9s:
     - superset-dev
     - ingress-nginx
     - checker-dev
-    - database-uat
     - argocd
     - pixerlens-uat
     - micrologic-uat
     - pixerlens-mobile-demo
     - pixerlens-dev
   view:
-    active: namespace
+    active: node
   featureGates:
     nodeShell: false
   portForwardAddress: localhost
