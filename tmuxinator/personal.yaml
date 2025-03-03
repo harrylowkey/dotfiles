@@ -10,3 +10,10 @@ windows:
         - terminal:
             - cd whatIlearn
             - echo "Stick to plan"
+  - instagram-coding-easily:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd instagram-coding-easily-api
+        - terminal:
+            - cd instagram-coding-easily-api

@@ -1,45 +1,54 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: all
+    active: argocd
     lockFavorites: false
     favorites:
-    - all
-    - pixerlens-data-uat
-    - pixerlens-data-dev
-    - pixerpost
-    - tool-uat
-    - pim-dev
-    - trisu-uat
-    - database-uat
-    - pim-prod
-    - complaintmgm-uat
-    - pixerlens-client-dev
-    - keycloak-dev
-    - database-dev
-    - tool-dev
-    - pim-uat
-    - kube-system
-    - pixerlens-client-uat
-    - rotex-uat
-    - rotex-dev
-    - kube-public
-    - kube-node-lease
-    - keycloak-uat
-    - cert-manager
-    - checker-uat
-    - system-dev
-    - default
-    - superset-dev
-    - ingress-nginx
-    - checker-dev
+    - annotet-vn-dev
     - argocd
-    - pixerlens-uat
+    - tool-dev
+    - database-dev
+    - all
+    - pixerlens-data-vn-dev
+    - vulnerability-dataverse-dev
+    - scholastic-leasing-management-dev
+    - pixerlens-data-dev
+    - system-dev
+    - trisu-uat
+    - superset-dev
+    - pixerlens-client-dev
+    - keycloak-uat
+    - pixerlens-data-uat
+    - ingress-nginx
+    - cert-manager
+    - kube-node-lease
+    - checker-dev
+    - pim-uat
+    - tool-uat
+    - database-uat
+    - annotet-dev
+    - rotex-uat
+    - kube-public
+    - kube-system
+    - default
+    - keycloak-dev
+    - pixerlens-client-uat
+    - pim-dev
+    - complaintmgm-uat
+    - rotex-dev
+    - vulnerability-dev
+    - minio-develop
+    - pim-prod
+    - pixerpost
     - micrologic-uat
+    - checker-uat
+    - minio-dev
+    - minio
+    - pixerlens-uat
     - pixerlens-mobile-demo
     - pixerlens-dev
   view:
-    active: node
+    active: namespace
   featureGates:
     nodeShell: false
   portForwardAddress: localhost

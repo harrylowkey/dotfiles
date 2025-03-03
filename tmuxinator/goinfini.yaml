@@ -1,0 +1,22 @@
+name: goinfini
+root: ~/Dev/goinfini
+attach: false
+windows:
+  - backend:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd infini-ai-backend
+            - . venv/bin/activate
+            - export PYTHONPATH=/Users/harrydang/Dev/goinfini/infini-ai-backend/src/
+        - terminal:
+            - cd infini-ai-backend
+            - . venv/bin/activate
+            - export PYTHONPATH=/Users/harrydang/Dev/goinfini/infini-ai-backend/src/
+  - deployment:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd infini-ai-deployment
+        - terminal:
+            - cd infini-ai-deployment
