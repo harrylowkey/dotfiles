@@ -1,54 +1,20 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: all
+    active: pertinent-lab-dev
     lockFavorites: false
     favorites:
-    - superset-dev
-    - pim-dev
-    - annotet-vn-dev
-    - argocd
-    - tool-dev
-    - database-dev
-    - all
-    - pixerlens-data-vn-dev
-    - vulnerability-dataverse-dev
-    - rotex-dev
-    - ingress-nginx
-    - kube-system
-    - pim-uat
-    - complaintmgm-uat
-    - trisu-uat
-    - tool-uat
-    - pixerlens-data-uat
-    - kube-public
-    - pixerpost
-    - scholastic-leasing-management-dev
-    - keycloak-uat
-    - rotex-uat
-    - pim-prod
-    - keycloak-dev
-    - pixerlens-data-dev
-    - checker-dev
-    - pixerlens-client-uat
-    - annotet-dev
-    - minio-develop
-    - kube-node-lease
-    - system-dev
-    - database-uat
-    - vulnerability-dev
-    - pixerlens-client-dev
-    - checker-uat
-    - cert-manager
-    - default
-    - micrologic-uat
-    - minio-dev
-    - minio
-    - pixerlens-uat
-    - pixerlens-mobile-demo
-    - pixerlens-dev
+      - argocd
+      - all
+      - trisu-uat
+      - checker-uat
+      - pertinent-lab-dev
+      - rotex-uat
+      - pim-uat
+      - cert-manager
+      - pim-dev
   view:
     active: pods
   featureGates:
     nodeShell: false
-  portForwardAddress: localhost
+  proxy: null

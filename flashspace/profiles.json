@@ -1,0 +1,139 @@
+{
+  "profiles" : [
+    {
+      "id" : "778470A3-5619-4C38-B7C3-0FC98965CBA5",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "company.thebrowser.Browser",
+              "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
+              "name" : "Arc"
+            }
+          ],
+          "display" : "DELL P2722H",
+          "id" : "07C17A8A-0866-4B32-B7B2-D1D7C22D932E",
+          "name" : "Browser",
+          "shortcut" : "opt+q",
+          "symbolIconName" : "network"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/icon.icns",
+              "name" : "Microsoft Teams"
+            },
+            {
+              "bundleIdentifier" : "com.hnc.Discord",
+              "iconPath" : "/Applications/Discord.app/Contents/Resources/electron.icns",
+              "name" : "Discord"
+            },
+            {
+              "bundleIdentifier" : "com.tinyspeck.slackmacgap",
+              "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
+              "name" : "Slack"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "403AB295-D920-47B8-8449-71F9E8E7ADBE",
+          "name" : "Work Chat",
+          "shortcut" : "opt+w",
+          "symbolIconName" : "message.badge"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.jetbrains.datagrip",
+              "iconPath" : "/Applications/DataGrip.app/Contents/Resources/datagrip.icns",
+              "name" : "DataGrip"
+            },
+            {
+              "bundleIdentifier" : "com.jetbrains.pycharm",
+              "iconPath" : "/Applications/PyCharm.app/Contents/Resources/pycharm.icns",
+              "name" : "PyCharm"
+            },
+            {
+              "bundleIdentifier" : "org.RedisLabs.RedisInsight-V2",
+              "iconPath" : "/Applications/Redis Insight.app/Contents/Resources/icon.icns",
+              "name" : "Redis Insight"
+            },
+            {
+              "bundleIdentifier" : "com.azuredatastudio.oss",
+              "iconPath" : "/Applications/Azure Data Studio.app/Contents/Resources/Azure Data Studio.icns",
+              "name" : "Azure Data Studio"
+            },
+            {
+              "bundleIdentifier" : "com.postmanlabs.mac",
+              "iconPath" : "/Applications/Postman.app/Contents/Resources/app.icns",
+              "name" : "Postman"
+            }
+          ],
+          "display" : "DELL P2722H",
+          "id" : "85B7A979-CCE4-47EC-8E43-0A3E05EA2F35",
+          "name" : "Coding Tools",
+          "shortcut" : "opt+e",
+          "symbolIconName" : "folder"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.googlecode.iterm2",
+              "iconPath" : "/Users/harrydang/Applications/iTerm.app/Contents/Resources/AppIcon.icns",
+              "name" : "iTerm2"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "539E71C4-14E8-45CA-9222-BEF94FE6FCB5",
+          "name" : "Coding",
+          "shortcut" : "opt+a",
+          "symbolIconName" : "laptopcomputer"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.pumble.desktop",
+              "iconPath" : "/Applications/Pumble.app/Contents/Resources/icon.icns",
+              "name" : "Pumble"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "B59D4080-252D-47D6-9B27-FC09C3A109DB",
+          "name" : "Work",
+          "shortcut" : "opt+s"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.facebook.archon.developerID",
+              "iconPath" : "/Applications/Messenger.app/Contents/Resources/messenger.icns",
+              "name" : "Messenger"
+            },
+            {
+              "bundleIdentifier" : "net.whatsapp.WhatsApp",
+              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIconCatalystRelease.icns",
+              "name" : "‎WhatsApp"
+            },
+            {
+              "bundleIdentifier" : "com.vng.zalo",
+              "iconPath" : "/Applications/Zalo.app/Contents/Resources/icon.icns",
+              "name" : "Zalo"
+            },
+            {
+              "bundleIdentifier" : "com.spotify.client",
+              "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
+              "name" : "Spotify"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "69B29050-E4C1-4686-9E1D-ADA238963779",
+          "name" : "Message",
+          "shortcut" : "opt+d",
+          "symbolIconName" : "music.note"
+        }
+      ]
+    }
+  ],
+  "selectedProfileId" : "778470A3-5619-4C38-B7C3-0FC98965CBA5"
+}

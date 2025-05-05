@@ -2,11 +2,20 @@ contexts:
 - name: localhost:8088
   server: localhost:8088
   user: localhost:8088
-current-context: localhost:8088
+- name: localhost:8080
+  server: localhost:8080
+  user: localhost:8080
+current-context: localhost:8080
 servers:
 - grpc-web-root-path: ""
   insecure: true
   server: localhost:8088
+- grpc-web-root-path: ""
+  insecure: true
+  plain-text: true
+  server: localhost:8080
 users:
 - auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjpsb2dpbiIsImV4cCI6MTcwMjg3MTU5MCwibmJmIjoxNzAyNzg1MTkwLCJpYXQiOjE3MDI3ODUxOTAsImp0aSI6IjBhZjAyYmIwLWIxZjMtNDBlMy1iMGNhLWI1Yjk0ZDE3NDRlMiJ9.0UT0IcyYcmUiAUW3TrOLTpGTn5pWr-KwKNsFT27ZMxw
   name: localhost:8088
+- auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjpsb2dpbiIsImV4cCI6MTc0NDE5MjM0MywibmJmIjoxNzQ0MTA1OTQzLCJpYXQiOjE3NDQxMDU5NDMsImp0aSI6ImYyNDRlMjdmLWMzYzUtNDY3NS05YjEwLWJhOWY0OTNjNzJlOCJ9.P3xXe457Tmitmid24TXKWf5RGQN0VkqHN1w38dKZww8
+  name: localhost:8080
