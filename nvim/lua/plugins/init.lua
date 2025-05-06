@@ -2,14 +2,14 @@ local merge = require("utils.merge")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "--single-branch",
-        "https://github.com/folke/lazy.nvim.git",
-        lazypath,
-    })
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--single-branch",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath,
+  })
 end
 vim.opt.runtimepath:prepend(lazypath)
 
@@ -25,20 +25,22 @@ local coding_plugins = require("plugins.coding")
 local cmp_plugins = require("plugins.cmp")
 local db_plugins = require("plugins.db")
 local dap_plugins = require("plugins.dap")
+local ai_plugins = require("plugins.ai")
 
 local plugins = merge(
-    core_plugins,
-    dashboard_plugins,
-    edit_plugins,
-    git_plugins,
-    lsp_plugins,
-    navigator_plugins,
-    terminal_plugins,
-    ui_plugins,
-    coding_plugins,
-    cmp_plugins,
-    db_plugins,
-    dap_plugins
+  core_plugins,
+  dashboard_plugins,
+  edit_plugins,
+  git_plugins,
+  lsp_plugins,
+  navigator_plugins,
+  terminal_plugins,
+  ui_plugins,
+  coding_plugins,
+  cmp_plugins,
+  db_plugins,
+  dap_plugins,
+  ai_plugins
 )
 
 require("lazy").setup(plugins)
