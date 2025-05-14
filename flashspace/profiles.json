@@ -82,6 +82,11 @@
               "bundleIdentifier" : "com.googlecode.iterm2",
               "iconPath" : "/Users/harrydang/Applications/iTerm.app/Contents/Resources/AppIcon.icns",
               "name" : "iTerm2"
+            },
+            {
+              "bundleIdentifier" : "com.jetbrains.rider",
+              "iconPath" : "/Applications/Rider.app/Contents/Resources/rider.icns",
+              "name" : "JetBrains Rider"
             }
           ],
           "display" : "Built-in Retina Display",
@@ -93,15 +98,16 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.pumble.desktop",
-              "iconPath" : "/Applications/Pumble.app/Contents/Resources/icon.icns",
-              "name" : "Pumble"
+              "bundleIdentifier" : "com.spotify.client",
+              "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
+              "name" : "Spotify"
             }
           ],
           "display" : "Built-in Retina Display",
-          "id" : "B59D4080-252D-47D6-9B27-FC09C3A109DB",
-          "name" : "Work",
-          "shortcut" : "opt+s"
+          "id" : "467C8496-791B-4FEE-886E-3BF75E9BC95C",
+          "name" : "Music",
+          "shortcut" : "opt+s",
+          "symbolIconName" : "music.quarternote.3"
         },
         {
           "apps" : [
@@ -119,11 +125,6 @@
               "bundleIdentifier" : "com.vng.zalo",
               "iconPath" : "/Applications/Zalo.app/Contents/Resources/icon.icns",
               "name" : "Zalo"
-            },
-            {
-              "bundleIdentifier" : "com.spotify.client",
-              "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
-              "name" : "Spotify"
             }
           ],
           "display" : "Built-in Retina Display",
@@ -134,6 +135,5 @@
         }
       ]
     }
-  ],
-  "selectedProfileId" : "778470A3-5619-4C38-B7C3-0FC98965CBA5"
+  ]
 }
