@@ -28,9 +28,9 @@ local options = {
     autoindent = true, --- Good auto indent
     smartindent = true, --- Makes indenting smart
     smarttab = true, --- Makes tabbing smarter will realize you have 2 vs 4
-    shiftwidth = 2, --- Change a number of space characters inserted for indentation
-    softtabstop = 2, --- Insert 2 spaces for a tab
-    tabstop = 2, --- Insert 2 spaces for a tab
+    shiftwidth = 4, --- Change a number of space characters inserted for indentation
+    softtabstop = 4, --- Insert 2 spaces for a tab
+    tabstop = 4, --- Insert 2 spaces for a tab
     wrap = false, --- Display long lines as just one line
 
     splitright = true, --- Vertical splits will automatically be to the right

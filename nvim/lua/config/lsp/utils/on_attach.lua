@@ -1,6 +1,6 @@
 local keymap = vim.keymap -- for conciseness
 
-return function(client, bufnr)
+return function(_, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
     keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor

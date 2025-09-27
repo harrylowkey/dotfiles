@@ -68,9 +68,19 @@
               "bundleIdentifier" : "com.postmanlabs.mac",
               "iconPath" : "/Applications/Postman.app/Contents/Resources/app.icns",
               "name" : "Postman"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.AzureVpnMac",
+              "iconPath" : "/Applications/Azure VPN Client.app/Contents/Resources/AppIcon.icns",
+              "name" : "Azure VPN Client"
+            },
+            {
+              "bundleIdentifier" : "com.apple.dt.Xcode",
+              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
+              "name" : "Xcode"
             }
           ],
-          "display" : "DELL P2722H",
+          "display" : "Built-in Retina Display",
           "id" : "85B7A979-CCE4-47EC-8E43-0A3E05EA2F35",
           "name" : "Coding Tools",
           "shortcut" : "opt+e",
@@ -87,9 +97,19 @@
               "bundleIdentifier" : "com.jetbrains.rider",
               "iconPath" : "/Applications/Rider.app/Contents/Resources/rider.icns",
               "name" : "JetBrains Rider"
+            },
+            {
+              "bundleIdentifier" : "com.apple.dt.Xcode",
+              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
+              "name" : "Xcode"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iphonesimulator",
+              "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
+              "name" : "Simulator"
             }
           ],
-          "display" : "Built-in Retina Display",
+          "display" : "DELL P2722H",
           "id" : "539E71C4-14E8-45CA-9222-BEF94FE6FCB5",
           "name" : "Coding",
           "shortcut" : "opt+a",

@@ -1,0 +1,22 @@
+name: planix
+root: ~/Dev/hodfords/employer-planix/
+attach: false
+windows:
+  - api:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - echo "Happy coding"
+        - log:
+            - echo "Happy coding"
+  - employer:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ../employer-backend
+            - nvm use v22.17.0
+            - echo "Happy coding"
+        - log:
+            - cd ../employer-backend
+            - nvm use v22.17.0
+            - echo "Happy coding"
