@@ -1,4 +1,3 @@
-local lspconfig = require("lspconfig")
 local capabilities = require("config.lsp.utils/capabilities")
 local handlers = require("config.lsp.utils/handlers")
 
@@ -39,9 +38,11 @@ local settings = {
     },
 }
 
-lspconfig.eslint.setup({
+vim.lsp.config("eslint", {
     capabilities = capabilities,
     handlers = handlers,
     on_attach = on_attach,
     settings = settings,
 })
+
+vim.lsp.enable({ "eslint" })
