@@ -15,14 +15,6 @@ return {
         "Exafunction/codeium.vim",
         event = "BufEnter",
     },
-
-    "greggh/claude-code.nvim",
-    dependencies = {
-        "nvim-lua/plenary.nvim", -- Required for git operations
-    },
-    config = function()
-        require("config.claudecode")
-    end,
     -- {
     --   "olimorris/codecompanion.nvim",
     --   dependencies = {
