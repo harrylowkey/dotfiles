@@ -21,17 +21,13 @@ return {
     {
         "nvimdev/lspsaga.nvim",
         branch = "main",
-        requires = {
-            { "nvim-tree/nvim-web-devicons" },
-            { "nvim-treesitter/nvim-treesitter" },
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+            "nvim-treesitter/nvim-treesitter",
         },
         config = function()
             require("config.lsp.plugins.lspsaga")
         end,
-    },
-    {
-        "jose-elias-alvarez/nvim-lsp-ts-utils",
-        dependencies = "nvim-lspconfig",
     },
     {
         "pmizio/typescript-tools.nvim",

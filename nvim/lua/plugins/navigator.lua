@@ -6,8 +6,8 @@ return {
     config = function()
       require("config.plugins.nvim-tree")
     end,
-    requires = {
-      { "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
     },
   },
   {

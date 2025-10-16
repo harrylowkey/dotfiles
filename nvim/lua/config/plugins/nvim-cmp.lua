@@ -50,19 +50,18 @@ cmp.setup({
     { name = "codeium", group_index = 1, priority = 100 },
   }),
   formatting = {
-    format = function(entry, vim_item)
-      vim_item.kind = lspkind.symbolic(vim_item.kind, {})
-
-      vim_item.menu = ({
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      maxwidth = 50,
+      ellipsis_char = "...",
+      menu = {
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         buffer = "[BUF]",
         luasnip = "[Snip]",
         ["vim-dadbod-completion"] = "[DB]",
-      })[entry.source.name]
-
-      return vim_item
-    end,
+      },
+    }),
   },
 })
 
