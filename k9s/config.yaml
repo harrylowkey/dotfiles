@@ -1,10 +1,32 @@
 k9s:
+  # Live view auto-refresh
+  liveViewAutoRefresh: false
+  # Refresh rate in seconds
   refreshRate: 2
+  # API server request timeout
+  apiServerTimeout: 15s
+  # Maximum connection retry attempts
   maxConnRetry: 5
+  # Read-only mode
   readOnly: false
+  # Default view on startup
+  defaultView: ""
+  # Disable exit on Ctrl-C
   noExitOnCtrlC: false
-  noIcons: false
+  # Skip latest version check
   skipLatestRevCheck: false
+  # Disable pod counting for performance
+  disablePodCounting: false
+  # Port forward address
+  portForwardAddress: localhost
+  # Screen dump directory
+  screenDumpDir: /Users/harrydang/.config/k9s/screen-dumps/
+  # Current context
+  currentContext: k3d-ckad-cluster
+  # Current cluster
+  currentCluster: k3d-ckad-cluster
+
+  # Logger configuration
   logger:
     tail: 100
     buffer: 5000
@@ -12,8 +34,47 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: k3d-ckad-cluster
-  currentCluster: k3d-ckad-cluster
+
+  # UI settings
+  ui:
+    enableMouse: true
+    headless: false
+    logoless: true
+    crumbsless: false
+    reactive: false
+    noIcons: false
+    skin: customize
+
+  # Shell pod configuration
+  shellPod:
+    image: busybox:1.35.0
+    command: []
+    args: []
+    namespace: default
+    limits:
+      cpu: 100m
+      memory: 100Mi
+    labels: {}
+    tty: true
+
+  # Image scanning configuration
+  imageScans:
+    enable: false
+    exclusions:
+      namespaces:
+        - kube-system
+      labels: {}
+
+  # Resource thresholds
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+
+  # Cluster-specific configurations
   clusters:
     arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks:
       namespace:
@@ -37,17 +98,4 @@ k9s:
           memory: 100Mi
         labels: {}
       portForwardAddress: localhost
-  thresholds:
-    cpu:
-      critical: 90
-      warn: 70
-    memory:
-      critical: 90
-      warn: 70
-  screenDumpDir: /Users/harrydang/.config/k9s/screen-dumps/
-  ui:
-    enableMouse: true
-    headless: false
-    logoless: true
-    skin: customize
     

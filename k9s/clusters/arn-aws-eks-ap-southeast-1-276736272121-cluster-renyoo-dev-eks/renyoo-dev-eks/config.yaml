@@ -1,20 +1,20 @@
 k9s:
   cluster: arn:aws:eks:ap-southeast-1:276736272121:cluster/renyoo-dev-eks
   namespace:
-    active: pertinent-lab-dev
+    active: all
     lockFavorites: false
     favorites:
-      - pertinent-lab-dev
       - all
-      - checker-uat
-      - rotex-uat
-      - cert-manager
-      - argocd
-      - trisu-uat
-      - pim-uat
       - pim-dev
+      - vulnerability-dataverse-dev
+      - database-dev
+      - tool-uat
+      - annotet-dev
+      - minio-develop
+      - pixerlens-uat
+      - rotex-uat
   view:
-    active: v1/pods
+    active: v1/pods all
   featureGates:
     nodeShell: false
   proxy: null

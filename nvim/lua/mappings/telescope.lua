@@ -9,8 +9,3 @@ keymap.set("n", "<leader>fh", ":Telescope find_files hidden=true<cr>", opt)
 keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", opt)
 keymap.set("n", "<leader>fn", ":Telescope notify<CR>", opt)
 keymap.set("n", "<leader>?", "<cmd>Telescope help_tags<cr>", opt) -- list available help tags
-
--- Rest
-keymap.set("n", "<leader>re", function()
-    require("telescope").extensions.rest.select_env()
-end, { desc = "Rest select env" })

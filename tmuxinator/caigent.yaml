@@ -1,22 +1,24 @@
-name: planix
-root: ~/Dev/hodfords/employer-planix/
+name: caigent
+root: ~/Dev/hodfords/caigent/
 attach: false
 windows:
-  - api:
+  - backend:
       layout: main-horizontal
       panes:
         - source-code:
+            - cd ./caigent-backend
             - echo "Happy coding"
         - log:
+            - cd ./caigent-backend
             - echo "Happy coding"
-  - employer:
+  - ai:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd ../employer-backend
+            - cd ./caigent-ai
             - nvm use v22.17.0
             - echo "Happy coding"
         - log:
-            - cd ../employer-backend
+            - cd ./caigent-ai
             - nvm use v22.17.0
             - echo "Happy coding"

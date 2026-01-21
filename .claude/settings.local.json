@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kubectl get:*)",
+      "Bash(eksctl get nodegroup:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -5,6 +5,11 @@
       "name" : "Default",
       "workspaces" : [
         {
+          "appToFocus" : {
+            "bundleIdentifier" : "company.thebrowser.Browser",
+            "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
+            "name" : "Arc"
+          },
           "apps" : [
             {
               "bundleIdentifier" : "company.thebrowser.Browser",
@@ -15,6 +20,7 @@
           "display" : "DELL P2722H",
           "id" : "07C17A8A-0866-4B32-B7B2-D1D7C22D932E",
           "name" : "Browser",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+q",
           "symbolIconName" : "network"
         },

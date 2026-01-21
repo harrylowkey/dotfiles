@@ -1,0 +1,57 @@
+name: employer
+root: ~/Dev/hodfords/employer/
+attach: false
+windows:
+  - planix:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-planix
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-planix
+            - echo "Happy coding"
+  - employer:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-backend
+            - nvm use v22.17.0
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-backend
+            - nvm use v22.17.0
+            - echo "Happy coding"
+  - activity:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-backend-activity
+            - nvm use v22.17.0
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-backend-activity
+            - nvm use v22.17.0
+            - echo "Happy coding"
+  - permission:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-backend-permission
+            - nvm use v22.17.0
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-backend-permission
+            - nvm use v22.17.0
+            - echo "Happy coding"
+  - common:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-backend-common
+            - nvm use v22.17.0
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-backend-common
+            - nvm use v22.17.0
+            - echo "Happy coding"
