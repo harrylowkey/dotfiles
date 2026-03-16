@@ -16,9 +16,7 @@ windows:
       panes:
         - source-code:
             - cd ./caigent-ai
-            - nvm use v22.17.0
             - echo "Happy coding"
         - log:
             - cd ./caigent-ai
-            - nvm use v22.17.0
             - echo "Happy coding"

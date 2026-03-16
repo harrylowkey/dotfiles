@@ -2,18 +2,18 @@ name: personal
 root: ~/Dev/personal
 attach: false
 windows:
-  - whatIlearn:
+  - affiliate:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd whatIlearn
+            - cd affiliate
         - terminal:
-            - cd whatIlearn
+            - cd affiliate
             - echo "Stick to plan"
-  - instagram-coding-easily:
+  - lingua-loop-backend:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd instagram-coding-easily-api
+            - cd lingua-loop-api
         - terminal:
-            - cd instagram-coding-easily-api
+            - cd lingua-loop-api
