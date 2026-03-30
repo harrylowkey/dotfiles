@@ -100,16 +100,6 @@
               "name" : "iTerm2"
             },
             {
-              "bundleIdentifier" : "com.jetbrains.rider",
-              "iconPath" : "/Applications/Rider.app/Contents/Resources/rider.icns",
-              "name" : "JetBrains Rider"
-            },
-            {
-              "bundleIdentifier" : "com.apple.dt.Xcode",
-              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
-              "name" : "Xcode"
-            },
-            {
               "bundleIdentifier" : "com.apple.iphonesimulator",
               "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
               "name" : "Simulator"
@@ -124,29 +114,20 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.spotify.client",
-              "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
-              "name" : "Spotify"
+              "bundleIdentifier" : "com.anthropic.claudefordesktop",
+              "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
+              "name" : "Claude"
             }
           ],
           "display" : "Built-in Retina Display",
           "id" : "467C8496-791B-4FEE-886E-3BF75E9BC95C",
-          "name" : "Music",
+          "name" : "AI",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+s",
           "symbolIconName" : "music.quarternote.3"
         },
         {
           "apps" : [
-            {
-              "bundleIdentifier" : "com.facebook.archon.developerID",
-              "iconPath" : "/Applications/Messenger.app/Contents/Resources/messenger.icns",
-              "name" : "Messenger"
-            },
-            {
-              "bundleIdentifier" : "net.whatsapp.WhatsApp",
-              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIconCatalystRelease.icns",
-              "name" : "‎WhatsApp"
-            },
             {
               "bundleIdentifier" : "com.vng.zalo",
               "iconPath" : "/Applications/Zalo.app/Contents/Resources/icon.icns",
