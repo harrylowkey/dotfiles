@@ -10,10 +10,24 @@ windows:
         - terminal:
             - cd affiliate
             - echo "Stick to plan"
-  - lingua-loop-backend:
+  - lingualoop-api:
       layout: main-horizontal
       panes:
         - source-code:
-            - cd lingua-loop-api
+            - cd lingualoop/lingualoop-api
         - terminal:
-            - cd lingua-loop-api
+            - cd lingualoop/lingualoop-api
+  - lingualoop-extension:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd lingualoop/lingualoop-extension
+        - terminal:
+            - cd lingualoop/lingualoop-extension
+  - lingualoop-mobile:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd lingualoop/lingualoop-mobile
+        - terminal:
+            - cd lingualoop/lingualoop-mobile
