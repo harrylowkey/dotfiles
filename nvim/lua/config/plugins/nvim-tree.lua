@@ -24,12 +24,12 @@ local function custom_on_attach(bufnr)
 end
 
 local git_icons = {
-    unstaged = "",
-    staged = "",
-    unmerged = "",
-    renamed = "➜",
-    untracked = "",
-    deleted = "",
+    unstaged = "✗",
+    staged = "✓",
+    unmerged = "⌥",
+    renamed = "→",
+    untracked = "★",
+    deleted = "✕",
     ignored = "◌",
 }
 
@@ -42,7 +42,7 @@ nvimtree.setup({
     renderer = {
         icons = {
             show = {
-                file = true,
+                file = false,
                 folder = true,
                 folder_arrow = true,
                 git = true,
@@ -50,8 +50,14 @@ nvimtree.setup({
             },
             glyphs = {
                 folder = {
-                    arrow_closed = " ", -- arrow when folder is closed
-                    arrow_open = " ", -- arrow when folder is open
+                    arrow_closed = "▸",
+                    arrow_open = "▾",
+                    default = "📁",
+                    open = "📂",
+                    empty = "📁",
+                    empty_open = "📂",
+                    symlink = "🔗",
+                    symlink_open = "🔗",
                 },
                 git = git_icons,
             },

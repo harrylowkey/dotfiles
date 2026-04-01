@@ -1,7 +1,4 @@
-local present, wk = pcall(require, "which-key")
-if not present then
-	return
-end
+local wk = require("which-key")
 
 local function attach_markdown(bufnr)
 	wk.register({

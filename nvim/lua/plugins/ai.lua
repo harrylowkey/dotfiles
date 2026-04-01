@@ -1,6 +1,6 @@
 return {
     {
-        "Exafunction/codeium.nvim",
+        "Exafunction/windsurf.nvim",
         cmd = "Codeium",
         build = ":Codeium Auth",
         dependencies = {
@@ -10,10 +10,6 @@ return {
         config = function()
             require("codeium").setup({})
         end,
-    },
-    {
-        "Exafunction/codeium.vim",
-        event = "BufEnter",
     },
     -- {
     --   "olimorris/codecompanion.nvim",
