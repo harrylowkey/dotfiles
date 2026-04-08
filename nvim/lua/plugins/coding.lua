@@ -2,7 +2,6 @@ local on_attach = require("config.lsp.utils/on_attach")
 
 return {
     { "nvim-lua/plenary.nvim" },
-    { "LudoPinelli/comment-box.nvim" },
     {
         "folke/flash.nvim",
         event = "VeryLazy",
@@ -12,13 +11,6 @@ return {
       { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end,       desc = "Flash" },
       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
     },
-    },
-    {
-        "sunjon/shade.nvim",
-        config = function()
-            require("shade").setup()
-            require("shade").toggle()
-        end,
     },
     {
         "norcalli/nvim-colorizer.lua",
@@ -56,25 +48,6 @@ return {
                 },
             })
         end,
-    },
-    {
-        "tamton-aquib/duck.nvim",
-        config = function()
-            vim.keymap.set("n", "<leader>dd", function()
-                require("duck").hatch()
-            end, { desc = "Release duck" })
-            vim.keymap.set("n", "<leader>dk", function()
-                require("duck").cook()
-            end, { desc = "Cook duck" })
-        end,
-    },
-    {
-        "vhyrro/luarocks.nvim",
-        opts = {
-            rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" }, -- Specify LuaRocks packages to install
-        },
-        priority = 1000,
-        config = true,
     },
     {
         "MeanderingProgrammer/render-markdown.nvim",

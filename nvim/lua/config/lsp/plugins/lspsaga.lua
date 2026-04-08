@@ -1,6 +1,9 @@
 local lspsaga = require("lspsaga")
 
 lspsaga.setup({
+    lightbulb = {
+        enable = false,
+    },
     scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
     definition = {
         edit = "o",

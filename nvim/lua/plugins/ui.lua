@@ -1,30 +1,10 @@
 return {
   -- theme
-  { "diegoulloao/neofusion.nvim", priority = 1000, config = true, opts = ... },
-  { "sainnhe/gruvbox-material",   lazy = true },
-  {
-    "navarasu/onedark.nvim",
-    config = function()
-      require("onedark").setup({
-        style = "deep",
-      })
-    end,
-    opts = {},
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    config = function()
-      require("config.plugins.kanagawa_theme")
-    end,
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      require("config.plugins.catppuccin_theme")
-    end,
-  },
+  { "sainnhe/gruvbox-material", lazy = true },
+  { "diegoulloao/neofusion.nvim", lazy = true },
+  { "navarasu/onedark.nvim", lazy = true },
+  { "rebelot/kanagawa.nvim", lazy = true },
+  { "catppuccin/nvim", name = "catppuccin", lazy = true },
   ---
   {
     "xiyaowong/transparent.nvim",

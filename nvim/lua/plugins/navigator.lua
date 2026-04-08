@@ -23,12 +23,4 @@ return {
       require("config.plugins.telescope")
     end,
   },
-  {
-    "stevearc/oil.nvim",
-    opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("config.plugins.oil")
-    end,
-  },
 }
