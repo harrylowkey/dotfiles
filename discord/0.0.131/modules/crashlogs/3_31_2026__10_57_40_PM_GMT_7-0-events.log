@@ -1,0 +1,58 @@
+3/31/2026, 10:57:40 PM GMT+7 0: 
+
+----------------------------------------------
+3/31/2026, 10:57:40 PM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+3/31/2026, 10:57:40 PM GMT+7 2: ✅ webContents.created web1 "index.html"
+3/31/2026, 10:57:40 PM GMT+7 3: ✅ window.created win1 "discord"
+3/31/2026, 10:57:40 PM GMT+7 4: ✅ webContents.did-finish-load web1
+3/31/2026, 10:57:51 PM GMT+7 5: ✅ webContents.created web2 ""
+3/31/2026, 10:57:51 PM GMT+7 6: ✅ window.created win2 "Discord"
+3/31/2026, 10:57:52 PM GMT+7 7: ✅ webContents.did-finish-load web2
+3/31/2026, 10:57:53 PM GMT+7 8: window.close win1
+3/31/2026, 10:57:53 PM GMT+7 9: webContents.destroyed web1
+3/31/2026, 10:57:53 PM GMT+7 10: window.closed win1
+3/31/2026, 10:58:54 PM GMT+7 11: window.close win2
+3/31/2026, 11:50:30 PM GMT+7 0: 
+
+----------------------------------------------
+3/31/2026, 11:50:30 PM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+4/1/2026, 10:52:10 AM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 10:52:10 AM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+4/1/2026, 10:52:10 AM GMT+7 2: ✅ webContents.created web1 ""
+4/1/2026, 10:52:10 AM GMT+7 3: ✅ window.created win1 "discord"
+4/1/2026, 10:52:10 AM GMT+7 4: ✅ webContents.did-finish-load web1
+4/1/2026, 10:52:11 AM GMT+7 5: ✅ webContents.created web2 ""
+4/1/2026, 10:52:11 AM GMT+7 6: ✅ window.created win2 "Discord"
+4/1/2026, 10:52:12 AM GMT+7 7: ✅ webContents.did-finish-load web2
+4/1/2026, 10:52:14 AM GMT+7 8: window.close win1
+4/1/2026, 10:52:14 AM GMT+7 9: webContents.destroyed web1
+4/1/2026, 10:52:14 AM GMT+7 10: window.closed win1
+4/1/2026, 10:52:25 AM GMT+7 11: window.close win2
+4/1/2026, 10:52:46 AM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 10:52:46 AM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+4/1/2026, 10:52:48 AM GMT+7 12: window.close win2
+4/1/2026, 11:02:59 AM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 11:03:03 AM GMT+7 13: window.close win2
+4/1/2026, 11:44:34 AM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 11:44:34 AM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+4/1/2026, 11:44:38 AM GMT+7 14: window.close win2
+4/1/2026, 12:13:44 PM GMT+7 15: window.close win2
+4/1/2026, 12:18:32 PM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 12:20:27 PM GMT+7 16: window.close win2
+4/1/2026, 1:36:34 PM GMT+7 0: 
+
+----------------------------------------------
+4/1/2026, 1:36:34 PM GMT+7 1: Discord starting: {"releaseChannel":"stable","version":"0.0.131"}, modulepath: /home/harry/.config/discord/0.0.131/modules
+4/1/2026, 1:36:35 PM GMT+7 17: before-quit
+4/1/2026, 1:36:35 PM GMT+7 18: window.close win2
+4/1/2026, 1:36:35 PM GMT+7 19: webContents.destroyed web2
