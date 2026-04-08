@@ -10,13 +10,6 @@ local k9s = Terminal:new({
 		height = math.floor(0.85 * vim.fn.winheight(0)),
 		winblend = 4,
 	},
-	on_open = function(term)
-		require("shade").toggle()
-	end,
-	---@diagnostic disable-next-line: unused-local
-	on_close = function(term)
-		require("shade").toggle()
-	end,
 })
 
 function _k9s_toggle()

@@ -103,6 +103,11 @@
               "bundleIdentifier" : "com.apple.iphonesimulator",
               "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
               "name" : "Simulator"
+            },
+            {
+              "bundleIdentifier" : "com.superset.desktop",
+              "iconPath" : "/Applications/Superset.app/Contents/Resources/icon.icns",
+              "name" : "Superset"
             }
           ],
           "display" : "DELL P2722H",

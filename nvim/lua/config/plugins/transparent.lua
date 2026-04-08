@@ -1,35 +1,25 @@
---highlight SignColumn ctermbg=None guibg=None require("transparent").setup({ -- Optional, you eon't have to run setup.
---   groups = {                   -- table: default groups
---     "Normal",
---     "NormalNC",
---     "Comment",
---     "Constant",
---     "Special",
---     "Identifier",
---     "Statement",
---     "PreProc",
---     "Type",
---     "Underlined",
---     "Todo",
---     "String",
---     "Function",
---     "Conditional",
---     "Repeat",
---     "Operator",
---     "Structure",
---     "LineNr",
---     "NonText",
---     "SignColumn",
---     "CursorLine",
---     "CursorLineNr",
---     "StatusLine",
---     "StatusLineNC",
---     "EndOfBuffer",
---   },
---   extra_groups = {},  -- table: additional groups that should be cleared
---   exclude_groups = {}, -- table: groups you don't want to clear
--- })
---
+require("transparent").setup({
+    extra_groups = {
+        "NormalFloat",
+        "NvimTreeNormal",
+        "NvimTreeNormalNC",
+        "NvimTreeWinSeparator",
+        "TelescopeNormal",
+        "TelescopeBorder",
+        "TelescopePromptNormal",
+        "TelescopePromptBorder",
+        "TelescopeResultsNormal",
+        "TelescopeResultsBorder",
+        "TelescopePreviewNormal",
+        "TelescopePreviewBorder",
+        "LspFloatWinNormal",
+        "WhichKeyFloat",
+    },
+    exclude_groups = {
+        "CursorLine",
+        "CursorLineNr",
+    },
+})
+
 require("transparent").clear_prefix("lualine")
-require("transparent").clear_prefix("BufferLine")
-require("transparent").clear_prefix("NeoTree")
+require("transparent").clear_prefix("NvimTree")
