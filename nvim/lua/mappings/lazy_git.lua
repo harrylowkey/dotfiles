@@ -13,11 +13,9 @@ local lazygit = Terminal:new({
 	on_open = function(term)
 		vim.cmd("startinsert!")
 		vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
-		require("shade").toggle()
 	end,
 	on_close = function(term)
 		vim.cmd("startinsert!")
-		require("shade").toggle()
 	end,
 })
 

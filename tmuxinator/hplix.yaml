@@ -1,0 +1,13 @@
+name: hplix
+root: ~/Dev/hodfords/employer/
+attach: false
+windows:
+  - hplix:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./employer-backend
+            - echo "Happy coding"
+        - log:
+            - cd ./employer-backend
+            - echo "Happy coding"

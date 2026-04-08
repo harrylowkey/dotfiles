@@ -1,9 +1,4 @@
-local handlers = {
-    ["textDocument/hover"] = vim.lsp.buf.hover,
-    ["textDocument/signatureHelp"] = vim.lsp.buf.signature_help,
-}
-
--- Configure hover and signature help borders globally
+-- Configure hover and signature help borders via global config
 vim.lsp.handlers["textDocument/hover"] = function(err, result, ctx, config)
     config = config or {}
     config.border = NeoVim.ui.float.border
@@ -21,5 +16,7 @@ end
 vim.diagnostic.config({
     virtual_text = NeoVim.lsp.virtual_text,
 })
+
+local handlers = {}
 
 return handlers

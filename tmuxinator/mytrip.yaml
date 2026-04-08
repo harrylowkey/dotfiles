@@ -1,0 +1,22 @@
+name: mytrip
+root: ~/Dev/personal/mytrip/
+attach: false
+windows:
+  - backend:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./mytrip-backend
+            - echo "Happy coding"
+        - log:
+            - cd ./mytrip-backend
+            - echo "Happy coding"
+  - app:
+      layout: main-horizontal
+      panes:
+        - source-code:
+            - cd ./mytrip-ios-app
+            - echo "Happy coding"
+        - log:
+            - cd ./mytrip-ios-app
+            - echo "Happy coding"

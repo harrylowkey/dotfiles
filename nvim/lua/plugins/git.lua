@@ -6,5 +6,4 @@ return {
 			require("config.plugins.git-signs")
 		end,
 	},
-	{ "sindrets/diffview.nvim" },
 }
