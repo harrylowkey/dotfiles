@@ -2,7 +2,12 @@ local capabilities = require("config.lsp.utils/capabilities")
 local handlers = require("config.lsp.utils/handlers")
 
 local on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = true
+    -- Formatting is owned by conform/prettier, not the eslint LSP.
+    client.server_capabilities.documentFormattingProvider = false
+    -- The eslint server has no real hover; without this it answers Shift+K
+    -- (Lspsaga hover_doc) with an empty result -> a "No information available"
+    -- toast alongside the real tsserver hover. Let tsserver own hover.
+    client.server_capabilities.hoverProvider = false
     local function buf_set_option(...)
         vim.api.nvim_buf_set_option(bufnr, ...)
     end
