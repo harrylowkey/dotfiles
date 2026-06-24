@@ -23,7 +23,7 @@ local extendedHandlers = vim.tbl_extend("force", baseHandlers, {
 })
 
 local settings = {
-    separate_diagnostic_server = true,
+    separate_diagnostic_server = false,
     tsserver_file_preferences = {
         includeInlayParameterNameHints = "all",
         includeCompletionsForModuleExports = true,
