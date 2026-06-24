@@ -9,6 +9,7 @@ icon_map "${INFO}"
 icon_font="sketchybar-app-font:Regular:17.0"
 case "$INFO" in
   "Aside")    icon_result=""; icon_font="Hack Nerd Font:Regular:16.0" ;;   # nf-dev-browserstack U+E76B
+  "Hplix")    icon_result="󰭹"; icon_font="Hack Nerd Font:Regular:16.0" ;;   # U+F0B79
   "Superset") icon_result="󰵰"; icon_font="Hack Nerd Font:Regular:16.0" ;; # U+F0D70
 esac
 
