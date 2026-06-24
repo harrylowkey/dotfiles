@@ -1,15 +1,18 @@
 return {
-    { "mg979/vim-visual-multi" },
-    { "inkarkat/vim-ReplaceWithRegister" },
-    { "windwp/nvim-ts-autotag",          dependencies = { "nvim-treesitter" } },
+    { "mg979/vim-visual-multi", event = "VeryLazy" },
+    { "inkarkat/vim-ReplaceWithRegister", event = "VeryLazy" },
+    { "windwp/nvim-ts-autotag", event = { "BufReadPost", "BufNewFile" }, dependencies = { "nvim-treesitter" } },
     {
         "windwp/nvim-autopairs",
+        event = "InsertEnter",
         config = function()
             require("config.plugins.auto-pairs")
         end,
     },
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        lazy = false,
         build = ":TSUpdate",
         config = function()
             require("config.plugins.nvim-treesitter")
@@ -25,6 +28,7 @@ return {
     },
     {
         "numToStr/Comment.nvim",
+        event = "VeryLazy",
         config = function()
             require("Comment").setup()
         end,

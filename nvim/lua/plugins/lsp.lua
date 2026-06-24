@@ -1,26 +1,32 @@
 return {
-    { "rafamadriz/friendly-snippets" },
     {
         "neovim/nvim-lspconfig",
+        -- LSP only matters once you open a real file, so defer the whole stack
+        -- off the startup/dashboard path. mason + mason-lspconfig are ordered
+        -- dependencies so their setup() runs before lspconfig's config.
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            {
+                "williamboman/mason.nvim",
+                config = function()
+                    require("config.lsp.plugins.mason")
+                end,
+            },
+            {
+                "williamboman/mason-lspconfig.nvim",
+                config = function()
+                    require("config.lsp.plugins.mason-lspconfig")
+                end,
+            },
+        },
         config = function()
             require("config.lsp.init")
         end,
     },
     {
-        "williamboman/mason.nvim",
-        config = function()
-            require("config.lsp.plugins.mason")
-        end,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("config.lsp.plugins.mason-lspconfig")
-        end,
-    },
-    {
         "nvimdev/lspsaga.nvim",
         branch = "main",
+        cmd = "Lspsaga",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
             "nvim-treesitter/nvim-treesitter",
@@ -31,12 +37,16 @@ return {
     },
     {
         "pmizio/typescript-tools.nvim",
+        -- Loaded on demand when config.lsp.languages.typescript require()s it,
+        -- which happens inside lspconfig's config on file open.
+        lazy = true,
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
     {
-        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        "mfussenegger/nvim-lint",
+        event = { "BufReadPre", "BufNewFile" },
         config = function()
-            require("lsp_lines").setup()
+            require("config.plugins.lint")
         end,
     },
     -- {

@@ -13,7 +13,7 @@ return {
             require("config.plugins.which-key")
         end,
     },
-    { "echasnovski/mini.nvim", version = false },
+    { "echasnovski/mini.nvim", version = false, lazy = true },
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
