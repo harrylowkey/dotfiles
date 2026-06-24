@@ -8,7 +8,8 @@ icon_map "${INFO}"
 # a Nerd Font instead of the app-font, so icon.font is switched alongside.
 icon_font="sketchybar-app-font:Regular:17.0"
 case "$INFO" in
-  "Aside")    icon_result=""; icon_font="Hack Nerd Font:Regular:16.0" ;;   # nf-dev-browserstack U+E76B
+  "Aside")    icon_result=""; icon_font="Hack Nerd Font:Regular:16.0" ;;   # nf-oct-browser U+F488
+  "Arc")      icon_result=""; icon_font="Hack Nerd Font:Regular:16.0" ;;   # nf-oct-browser U+F488
   "Hplix")    icon_result="󰭹"; icon_font="Hack Nerd Font:Regular:16.0" ;;   # U+F0B79
   "Superset") icon_result="󰵰"; icon_font="Hack Nerd Font:Regular:16.0" ;; # U+F0D70
 esac
