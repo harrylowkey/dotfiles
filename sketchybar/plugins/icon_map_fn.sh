@@ -3,6 +3,21 @@
 ### START-OF-ICON-MAP
 function icon_map() {
     case "$1" in
+   # --- CUSTOM fallbacks: apps not in sketchybar-app-font, mapped to a close
+   # --- category icon. Re-add these after updating the font/icon_map upstream.
+   "Azure Data Studio" | "Redis Insight")
+        icon_result=":dbeaver:"
+        ;;
+   "Azure VPN Client")
+        icon_result=":wireguard:"
+        ;;
+   "CapCut" | "NCPlayer")
+        icon_result=":vlc:"
+        ;;
+   "CocCoc")
+        icon_result=":google_chrome:"
+        ;;
+   # --- END CUSTOM ---
    "Live")
         icon_result=":ableton:"
         ;;
