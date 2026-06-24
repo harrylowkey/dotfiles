@@ -178,8 +178,6 @@ wk.add({
         remap = false,
     },
     { "<leader>gm", desc = "blame line", nowait = false, remap = false },
-    { "<leader>k", group = "K9s", nowait = false, remap = false },
-    { "<leader>k9", "<cmd>lua _k9s_toggle()<CR>", desc = "k9s toggle", nowait = false, remap = false },
     { "<leader>l", group = "Lazy Git & LSP Saga", nowait = false, remap = false },
     {
         "<leader>lc",

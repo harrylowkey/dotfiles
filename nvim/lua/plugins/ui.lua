@@ -83,21 +83,4 @@ return {
       require("config.plugins.indent-blankline")
     end,
   },
-  {
-    "michaelrommel/nvim-silicon",
-    lazy = true,
-    cmd = "Silicon",
-    config = function()
-      require("nvim-silicon").setup({
-        font = "JetbrainsMono Nerd Font",
-        to_clipboard = true,
-        theme = "TwoDark",
-        background_image = "/Users/harrydang/.config/wallpapers/galaxy.png",
-        language = nil,
-        window_title = function()
-          return vim.fn.expand("%:t")
-        end,
-      })
-    end,
-  },
 }
