@@ -23,7 +23,7 @@ local extendedHandlers = vim.tbl_extend("force", baseHandlers, {
 })
 
 local settings = {
-    separate_diagnostic_server = true,
+    separate_diagnostic_server = false,
     tsserver_file_preferences = {
         includeInlayParameterNameHints = "all",
         includeCompletionsForModuleExports = true,
@@ -31,19 +31,12 @@ local settings = {
     },
 }
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-local lsp_formatting = function(bufnr)
-    vim.lsp.buf.format({
-        filter = function(client)
-            return client.server_capabilities and client.server_capabilities.documentFormattingProvider == true
-        end,
-        bufnr = bufnr,
-    })
-end
-
 local custom_on_attach = function(client, bufnr)
-    client.server_capabilities.document_formatting = true
+    -- Formatting is owned by conform/prettier (see plugins/coding.lua). Disable
+    -- tsserver's formatter so it can't run a second format-on-save and reformat
+    -- against prettier/eslint (e.g. empty braces -> `{ }` instead of `{}`).
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
     on_attach(client, bufnr)
 
     local opts = { silent = true }
@@ -52,17 +45,6 @@ local custom_on_attach = function(client, bufnr)
     keymap.set("n", "<leader>si", ":TSToolsSortImports<CR>", opts)
     keymap.set("n", "<leader>ru", ":TSToolsRemoveUnused<CR>", opts)
     keymap.set("n", "<leader>rn", ":TSToolsRenameFile<CR>", opts)
-
-    if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            group = augroup,
-            buffer = bufnr,
-            callback = function()
-                lsp_formatting(bufnr)
-            end,
-        })
-    end
 end
 
 require("typescript-tools").setup({

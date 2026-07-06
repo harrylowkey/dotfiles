@@ -1,7 +1,11 @@
-require("nvim-treesitter").setup()
+local ts = require("nvim-treesitter")
 
--- Install missing parsers on startup (silent, async)
-local ensure_installed = {
+ts.setup({
+    install_dir = vim.fn.stdpath("data") .. "/site",
+})
+
+-- Install parsers
+ts.install({
     "json",
     "javascript",
     "typescript",
@@ -22,24 +26,16 @@ local ensure_installed = {
     "python",
     "xml",
     "http",
-}
-
-vim.api.nvim_create_autocmd("VimEnter", {
-    once = true,
-    callback = function()
-        local installed = require("nvim-treesitter.config").get_installed()
-        local to_install = vim.tbl_filter(function(lang)
-            return not vim.list_contains(installed, lang)
-        end, ensure_installed)
-        if #to_install > 0 then
-            require("nvim-treesitter").install(to_install)
-        end
-    end,
 })
 
--- Enable treesitter-based highlighting for all filetypes
+-- Enable treesitter highlighting
 vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "json", "javascript", "typescript", "typescriptreact", "javascriptreact",
+        "tsx", "yaml", "html", "css", "markdown", "svelte", "graphql",
+        "bash", "lua", "vim", "dockerfile", "dart", "python", "xml", "http",
+    },
     callback = function()
-        pcall(vim.treesitter.start)
+        vim.treesitter.start()
     end,
 })

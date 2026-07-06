@@ -15,6 +15,11 @@
               "bundleIdentifier" : "company.thebrowser.Browser",
               "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
               "name" : "Arc"
+            },
+            {
+              "bundleIdentifier" : "at.studio.AsideBrowser",
+              "iconPath" : "/Applications/Aside.app/Contents/Resources/app.icns",
+              "name" : "Aside"
             }
           ],
           "display" : "DELL P2722H",
@@ -27,11 +32,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/icon.icns",
-              "name" : "Microsoft Teams"
-            },
-            {
               "bundleIdentifier" : "com.hnc.Discord",
               "iconPath" : "/Applications/Discord.app/Contents/Resources/electron.icns",
               "name" : "Discord"
@@ -40,6 +40,11 @@
               "bundleIdentifier" : "com.tinyspeck.slackmacgap",
               "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
               "name" : "Slack"
+            },
+            {
+              "bundleIdentifier" : "com.hplix.app",
+              "iconPath" : "/Applications/Hplix.app/Contents/Resources/electron.icns",
+              "name" : "Hplix"
             }
           ],
           "display" : "Built-in Retina Display",
@@ -113,6 +118,7 @@
           "display" : "DELL P2722H",
           "id" : "539E71C4-14E8-45CA-9222-BEF94FE6FCB5",
           "name" : "Coding",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+a",
           "symbolIconName" : "laptopcomputer"
         },
@@ -137,6 +143,11 @@
               "bundleIdentifier" : "com.vng.zalo",
               "iconPath" : "/Applications/Zalo.app/Contents/Resources/icon.icns",
               "name" : "Zalo"
+            },
+            {
+              "bundleIdentifier" : "ru.keepcoder.Telegram",
+              "iconPath" : "/Applications/Telegram.app/Contents/Resources/AppIcon.icns",
+              "name" : "Telegram"
             }
           ],
           "display" : "Built-in Retina Display",

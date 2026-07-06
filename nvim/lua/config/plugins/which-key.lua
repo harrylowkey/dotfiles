@@ -24,6 +24,13 @@ wk.add({
     { "<leader>8", hidden = true, nowait = false, remap = false },
     { "<leader>9", hidden = true, nowait = false, remap = false },
     { "<leader>?", "<cmd>Telescope help_tags<CR>", desc = "Telescope helps", nowait = false, remap = false },
+    {
+        "<leader>;",
+        "<cmd>lua require('dropbar.api').pick()<CR>",
+        desc = "Dropbar pick symbol",
+        nowait = false,
+        remap = false,
+    },
     { "<leader>c", group = "colorscheme theme", nowait = false, remap = false },
     { "<leader>ct", "<cmd>Telescope colorscheme<CR>", desc = "color schemes", nowait = false, remap = false },
     { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Tree toggle", nowait = false, remap = false },
@@ -134,8 +141,6 @@ wk.add({
         remap = false,
     },
     { "<leader>gm", desc = "blame line", nowait = false, remap = false },
-    { "<leader>k", group = "K9s", nowait = false, remap = false },
-    { "<leader>k9", "<cmd>lua _k9s_toggle()<CR>", desc = "k9s toggle", nowait = false, remap = false },
     { "<leader>l", group = "Lazy Git & LSP Saga", nowait = false, remap = false },
     {
         "<leader>lc",
@@ -152,6 +157,7 @@ wk.add({
         nowait = false,
         remap = false,
     },
+    { "<leader>ln", "<cmd>lua require('lint').try_lint()<CR>", desc = "lint current file", nowait = false, remap = false },
     { "<leader>m", group = "Markdown & Harpoon", nowait = false, remap = false },
     { "<leader>md", "<cmd>MarkdownPreviewToggle<CR>", desc = "markdown preview toggle", nowait = false, remap = false },
     {
@@ -176,6 +182,7 @@ wk.add({
         nowait = false,
         remap = false,
     },
+    { "<leader>o", "<cmd>Lspsaga outline<CR>", desc = "Outline toggle", nowait = false, remap = false },
     { "<leader>r", group = "Rename text", nowait = false, remap = false },
     { "<leader>rn", "lua vim.lsp.buf.rename()<CR>", desc = "rename", nowait = false, remap = false },
     { "<leader>s", group = "Search", nowait = false, remap = false },

@@ -1,32 +1,29 @@
 return {
     {
         "hrsh7th/nvim-cmp",
+        -- Load the whole completion stack only when you start typing (or open
+        -- the cmdline), instead of at startup. All sources + LuaSnip are
+        -- dependencies, so they defer with it.
+        event = { "InsertEnter", "CmdlineEnter" },
         dependencies = {
-            "friendly-snippets",
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "saadparwaiz1/cmp_luasnip",
             {
-                "Exafunction/windsurf.nvim",
-                cmd = "Codeium",
-                build = ":Codeium Auth",
-                opts = {},
+                "L3MON4D3/LuaSnip",
+                version = "v2.*",
+                build = "make install_jsregexp",
+                dependencies = { "rafamadriz/friendly-snippets" },
+                config = function()
+                    require("config.plugins.lua_snip")
+                end,
             },
         },
         config = function()
             require("config.plugins.nvim-cmp")
         end,
     },
-    {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-        dependencies = "nvim-cmp",
-        build = "make install_jsregexp",
-        config = function()
-            require("config.plugins.lua_snip")
-        end,
-    },
-    { "saadparwaiz1/cmp_luasnip", dependencies = "LuaSnip" },
-    { "hrsh7th/cmp-nvim-lua", dependencies = "cmp_luasnip" },
-    { "hrsh7th/cmp-nvim-lsp", dependencies = "cmp-nvim-lua" }, -- autocompletion
-    { "hrsh7th/cmp-buffer", dependencies = "cmp-nvim-lsp" },
-    { "hrsh7th/cmp-path", dependencies = "cmp-nvim-lsp" },
-    { "hrsh7th/cmp-cmdline" },
 }

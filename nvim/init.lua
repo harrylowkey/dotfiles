@@ -1,12 +1,8 @@
--- Suppress deprecation warnings from plugins to avoid "Press any key" on startup
-local original_deprecate = vim.deprecate
+-- Silence deprecation popups (e.g. "vim.tbl_flatten is deprecated") emitted by
+-- third-party plugins that haven't migrated off deprecated APIs yet. Overriding
+-- vim.deprecate at the source stops them before they reach vim.notify/noice.
+-- Note: this also hides deprecation notices for our own config on nvim upgrades.
 vim.deprecate = function() end
-vim.api.nvim_create_autocmd("VimEnter", {
-    once = true,
-    callback = function()
-        vim.deprecate = original_deprecate
-    end,
-})
 
 require("autocmds")
 

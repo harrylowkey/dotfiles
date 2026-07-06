@@ -18,6 +18,8 @@ NeoVim = {
     -- Please keep it
     icons = icons,
     lsp = {
-        virtual_text = true, -- show virtual text (errors, warnings, info) inline messages
+        -- Off: diagnostics render via virtual_lines (the red below-line text in
+        -- config.lsp.plugins.lsp-lines). Having both on double-renders each one.
+        virtual_text = false,
     },
 }

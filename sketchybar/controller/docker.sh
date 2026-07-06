@@ -1,10 +1,10 @@
-#!/usr/bin/env fish
+#!/usr/bin/env bash
 
-set -l red "0xffed8796"
-set -l green "0xffa6da95"
+red="0xffed8796"
+green="0xffa6da95"
 
-if pgrep -x "OrbStack" >/dev/null
-    sketchybar --set $NAME label="running  |" label.color=$green
+if pgrep -x "OrbStack" >/dev/null; then
+    sketchybar --set "$NAME" label="running  |" label.color=$green icon.color=$green
 else
-    sketchybar --set $NAME label="stopped  |" label.color=$red
-end
+    sketchybar --set "$NAME" label="stopped  |" label.color=$red icon.color=$red
+fi

@@ -1,8 +1,9 @@
 return {
-  { "christoomey/vim-tmux-navigator" },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  { "christoomey/vim-tmux-navigator", event = "VeryLazy" },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
   {
     "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeFindFile", "NvimTreeFindFileToggle", "NvimTreeResize" },
     config = function()
       require("config.plugins.nvim-tree")
     end,
@@ -12,9 +13,9 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
+    branch = "master",
+    cmd = "Telescope",
     dependencies = {
-      "nvim-lua/popup.nvim",
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-fzf-native.nvim",
       "cljoly/telescope-repo.nvim",

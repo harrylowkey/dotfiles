@@ -1,7 +1,7 @@
 return {
     {
-        "Exafunction/windsurf.nvim",
-        cmd = "Codeium",
+        "Exafunction/codeium.nvim",
+        event = "InsertEnter",
         build = ":Codeium Auth",
         dependencies = {
             "nvim-lua/plenary.nvim",
@@ -11,6 +11,10 @@ return {
             require("codeium").setup({})
         end,
     },
+    -- {
+    --     "Exafunction/codeium.vim",
+    --     event = "BufEnter",
+    -- },
     -- {
     --   "olimorris/codecompanion.nvim",
     --   dependencies = {

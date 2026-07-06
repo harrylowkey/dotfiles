@@ -1,10 +1,6 @@
 return {
   -- theme
   { "sainnhe/gruvbox-material", lazy = true },
-  { "diegoulloao/neofusion.nvim", lazy = true },
-  { "navarasu/onedark.nvim", lazy = true },
-  { "rebelot/kanagawa.nvim", lazy = true },
-  { "catppuccin/nvim", name = "catppuccin", lazy = true },
   ---
   {
     "xiyaowong/transparent.nvim",
@@ -14,19 +10,22 @@ return {
   },
   {
     "nvim-tree/nvim-web-devicons",
+    lazy = true,
     config = function()
       require("config.plugins.nvim-web-devicons")
     end,
   },
-  { "onsails/lspkind.nvim" },
+  { "onsails/lspkind.nvim", lazy = true },
   {
     "rcarriga/nvim-notify",
+    lazy = true,
     config = function()
       require("config.plugins.nvim-notify")
     end,
   },
   {
     "folke/noice.nvim",
+    event = "VeryLazy",
     dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
     config = function()
       require("config.plugins.noice")
@@ -39,17 +38,28 @@ return {
       require("config.plugins.lualine")
     end,
   },
-  -- animation
   {
-    "echasnovski/mini.animate",
+    "Bekaboo/dropbar.nvim",
     event = "VeryLazy",
-    opts = function(_, opts)
-      opts.scroll = {
-        enable = false,
-      }
-      opts.cursor = {
-        enable = false,
-      }
+    dependencies = { "nvim-telescope/telescope-fzf-native.nvim" },
+    config = function()
+      require("dropbar").setup({
+        bar = {
+          enable = function(buf, win, _)
+            if
+              not vim.api.nvim_buf_is_valid(buf)
+              or not vim.api.nvim_win_is_valid(win)
+              or vim.fn.win_gettype(win) ~= ""
+              or vim.wo[win].diff
+              or vim.api.nvim_win_get_config(win).zindex
+              or vim.bo[buf].buftype ~= ""
+            then
+              return false
+            end
+            return vim.bo[buf].ft ~= "alpha" and vim.bo[buf].ft ~= "dashboard"
+          end,
+        },
+      })
     end,
   },
   {
@@ -67,55 +77,10 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {},
     config = function()
       require("config.plugins.indent-blankline")
-    end,
-  },
-  {
-    "echasnovski/mini.indentscope",
-    version = false,     -- wait till new 0.7.0 release to put it back on semver
-    event = "VeryLazy",
-    opts = {},
-    config = function()
-      require("config.plugins.indent-scope")
-    end,
-    init = function()
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = {
-          "help",
-          "alpha",
-          "dashboard",
-          "neo-tree",
-          "Trouble",
-          "trouble",
-          "lazy",
-          "mason",
-          "notify",
-          "toggleterm",
-          "lazyterm",
-        },
-        callback = function()
-          vim.b.miniindentscope_disable = true
-        end,
-      })
-    end,
-  },
-  {
-    "michaelrommel/nvim-silicon",
-    lazy = true,
-    cmd = "Silicon",
-    config = function()
-      require("nvim-silicon").setup({
-        font = "JetbrainsMono Nerd Font",
-        to_clipboard = true,
-        theme = "TwoDark",
-        background_image = "/Users/harrydang/.config/wallpapers/galaxy.png",
-        language = nil,
-        window_title = function()
-          return vim.fn.expand("%:t")
-        end,
-      })
     end,
   },
 }

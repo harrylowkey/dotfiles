@@ -29,6 +29,46 @@ require("nvim-web-devicons").setup({
 			color = "#f1502f",
 			name = "Gitignore",
 		},
+		["package.json"] = {
+			icon = "",
+			color = "#cb3837",
+			name = "PackageJson",
+		},
+		["pnpm-lock.yaml"] = {
+			icon = "",
+			color = "#f9ad00",
+			name = "PnpmLock",
+		},
+		["tsconfig.json"] = {
+			icon = "",
+			color = "#519aba",
+			name = "TsConfig",
+		},
+		["docker-compose.yml"] = {
+			icon = "",
+			color = "#458ee6",
+			name = "DockerCompose",
+		},
+		["eslint.config.js"] = {
+			icon = "",
+			color = "#4b32c3",
+			name = "EslintConfig",
+		},
+		[".env"] = {
+			icon = "",
+			color = "#faf743",
+			name = "Env",
+		},
+		[".env.example"] = {
+			icon = "",
+			color = "#6d8086",
+			name = "EnvExample",
+		},
+		["CLAUDE.md"] = {
+			icon = "󰚩",
+			color = "#d97757",
+			name = "ClaudeMd",
+		},
 	},
 	-- same as `override` but specifically for overrides by extension
 	-- takes effect when `strict` is true
@@ -37,6 +77,16 @@ require("nvim-web-devicons").setup({
 			icon = "",
 			color = "#81e043",
 			name = "Log",
+		},
+		["tf"] = {
+			icon = "",
+			color = "#5c4ee5",
+			name = "Terraform",
+		},
+		["toml"] = {
+			icon = "",
+			color = "#9c4221",
+			name = "Toml",
 		},
 	},
 })
