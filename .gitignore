@@ -1,3 +1,4 @@
+# ── Tooling caches / state (pre-existing) ──
 thefuck
 configstore
 raycast
@@ -9,3 +10,36 @@ gh/hosts
 zshrc/*
 # nvim/lua/config/plugins/codecompanion.lua
 rclone/
+
+# ── Application data, caches & profiles (not real config) ──
+discord/
+zen/
+google-chrome/
+Hplix/
+GitHub/
+ibus/
+pulse/
+
+# ── Machine-specific desktop state / settings ──
+dconf/
+evolution/
+mimeapps.list
+gnome-initial-setup-done
+.gsd-keyboard.settings-ported
+*xdg-terminals.list
+
+# ── Stray / accidentally-committed files ──
+nvim-linux-x86_64.tar.gz
+:wqa
+*.log
+
+# ── Generic Electron/Chromium caches (safety net for any app dir) ──
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/CachedData/
+**/Crashpad/
+**/blob_storage/
+**/Service Worker/
+**/Local Storage/
+**/Session Storage/
