@@ -6,6 +6,6 @@ argocd
 flutter
 k9s/clusters/*
 gh/hosts
-zshrc/*
+zshrc/.secrets.zsh
 # nvim/lua/config/plugins/codecompanion.lua
 rclone/
