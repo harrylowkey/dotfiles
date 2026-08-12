@@ -5,17 +5,7 @@
       "name" : "Default",
       "workspaces" : [
         {
-          "appToFocus" : {
-            "bundleIdentifier" : "company.thebrowser.Browser",
-            "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
-            "name" : "Arc"
-          },
           "apps" : [
-            {
-              "bundleIdentifier" : "company.thebrowser.Browser",
-              "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
-              "name" : "Arc"
-            },
             {
               "bundleIdentifier" : "at.studio.AsideBrowser",
               "iconPath" : "/Applications/Aside.app/Contents/Resources/app.icns",
@@ -45,6 +35,16 @@
               "bundleIdentifier" : "com.hplix.app",
               "iconPath" : "/Applications/Hplix.app/Contents/Resources/electron.icns",
               "name" : "Hplix"
+            },
+            {
+              "bundleIdentifier" : "com.linear",
+              "iconPath" : "/Applications/Linear.app/Contents/Resources/icon.icns",
+              "name" : "Linear"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+              "name" : "Microsoft Teams"
             }
           ],
           "display" : "Built-in Retina Display",
@@ -61,19 +61,9 @@
               "name" : "DataGrip"
             },
             {
-              "bundleIdentifier" : "com.jetbrains.pycharm",
-              "iconPath" : "/Applications/PyCharm.app/Contents/Resources/pycharm.icns",
-              "name" : "PyCharm"
-            },
-            {
               "bundleIdentifier" : "org.RedisLabs.RedisInsight-V2",
               "iconPath" : "/Applications/Redis Insight.app/Contents/Resources/icon.icns",
               "name" : "Redis Insight"
-            },
-            {
-              "bundleIdentifier" : "com.azuredatastudio.oss",
-              "iconPath" : "/Applications/Azure Data Studio.app/Contents/Resources/Azure Data Studio.icns",
-              "name" : "Azure Data Studio"
             },
             {
               "bundleIdentifier" : "com.postmanlabs.mac",
@@ -100,11 +90,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.googlecode.iterm2",
-              "iconPath" : "/Users/harrydang/Applications/iTerm.app/Contents/Resources/AppIcon.icns",
-              "name" : "iTerm2"
-            },
-            {
               "bundleIdentifier" : "com.apple.iphonesimulator",
               "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
               "name" : "Simulator"
@@ -113,6 +98,11 @@
               "bundleIdentifier" : "com.superset.desktop",
               "iconPath" : "/Applications/Superset.app/Contents/Resources/icon.icns",
               "name" : "Superset"
+            },
+            {
+              "bundleIdentifier" : "com.soloterm.solo",
+              "iconPath" : "/Applications/Solo.app/Contents/Resources/icon.icns",
+              "name" : "Solo"
             }
           ],
           "display" : "DELL P2722H",
